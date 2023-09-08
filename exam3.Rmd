@@ -1,0 +1,129 @@
+
+
+```{r}
+plotFun(y *sin(x) + x *cos(y) ~x&y, xlim=c(0,20),ylim=c(0,20))
+```
+
+
+```{r}
+partialx=makeFun( y*cos(x) + cos(y)~x&y)
+partialy=makeFun(-x*sin(y) + sin(x) ~x&y)
+newx = 15
+newy = 5
+```
+
+```{r}
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx - 0.1*slopex
+newy = newy - 0.1*slopey
+# print new partial derivatives
+c(partialx(newx, newy), partialy(newx, newy))
+# print new point
+c(newx, newy)
+```
+
+
+
+
+
+```{r}
+SIRdyn = makeODE(dS ~ - 0.002*S*I, 
+                  dI ~  0.002*S*I -.3*I )
+Soln = integrateODE(SIRdyn, domain(t=0:50), S=290, I=10)
+traj_plot(I(t) ~ S(t), Soln, nt=10)
+```
+
+
+
+```{r}
+vectorfield_plot(t ~ 1,
+P ~ 0.2 * (1/2+ cos(t))* P,
+bounds(t=0:20, P=0:50))
+```
+
+
+
+```{r}
+
+f=makeFun(x^16 * exp(-x^2)~x)
+a=0
+b=4
+base = 0.0000001
+points = seq(from=a, to=b-base, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+
+```
+
+```{r}
+15/4
+30*3.75 - 12*(3.75)
+```
+
+```{r}
+h = makeFun((25.899 * exp(-0.993*t)+6.39 ~ t))
+h(0.25)
+60.30 + h(0.25)*(1.75)
+```
+
+```{r}
+
+a=0.25
+b=2
+base = 0.0000001
+points = seq(from=0.25, to=2-base, by=base)
+heights = h(points)
+areas = base*heights
+sum(areas)
+
+60.30 +  sum(areas)
+
+```
+
+
+```{r}
+SIRdyn = makeODE(dS ~ - 0.002*S*I, 
+                  dI ~  0.002*S*I -0.3*I )
+Soln = integrateODE(SIRdyn, domain(t=0:35), S=290, I=10)
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+
+
+```{r}
+f=makeFun(cos(exp(x))~x)
+
+b =  0.0000001
+
+(f(4+b)-f(4))/b
+
+```
+
+
+
+```{r}
+partialx = makeFun( y*cos(x) +cos(y) ~ x&y)
+partialy = makeFun(sin(x) -x*sin(y) ~ x&y)
+newx = 15
+newy = 5
+```
+
+
+```{r}
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx - 0.1*slopex
+newy = newy - 0.1*slopey
+# print new partial derivatives
+c(partialx(newx, newy), partialy(newx, newy))
+# print new point
+c(newx, newy)
+```
+
+```{r}
+18/4 * 16^(-1/4)* 81^1/4
+6/4 * (16)^(3/4) * 81^(-3/4)
+```
+

@@ -1,6 +1,5 @@
 # Dimensional Analysis
 
-
 ## Performing a Dimensional Analysis
 
 Given independent variables $x,y,z$ and dependent variable $w$:
@@ -26,7 +25,7 @@ A mixer with power $P$ turns a mixer with wings of length $D$ through a liquid o
 
 The velocity $V$ of a large ocean wave depends upon the period $P$, the acceleration of gravity $g$, and the density $\mu$ of the water. Find a formula for the velocity $V=V(P,g,\mu)$.
 
-
+<!--
 
 ## Solutions
 
@@ -82,3 +81,5 @@ which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
 $$
 V = k Pg
 $$
+
+-->

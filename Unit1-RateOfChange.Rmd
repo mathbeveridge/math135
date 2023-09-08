@@ -1,5 +1,15 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Average Rate of Change
 
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
 
 
 ## Goals
