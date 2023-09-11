@@ -118,7 +118,7 @@ Note that there is no "unlocking" fee in this plan. If there was an unlocking fe
 1. We use all 1650 barrels in 47 years, so the slope is $-1650/47=-35.11$. The formula is
 $$ B(t) =  - 35.11t+ 1650.$$
 
-2. The rate of change is 35.11 billions of barrels per year. This is the annual consumption of oil. The vertical intercept is 1650 barrels. This is the amount of oil reserves in 2016.
+2. The rate of change is -35.11 billions of barrels per year. This is the annual consumption of oil. The vertical intercept is 1650 barrels. This is the amount of oil reserves in 2016.
 
 
 
