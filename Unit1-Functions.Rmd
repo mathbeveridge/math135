@@ -62,3 +62,79 @@ One rainy summer day, measurements were recorded (in inches) from a rain gauge e
 1. What was the average rate of rainfall from 8 a.m. to 5 p.m.? 
 2. What are the units of this rate of change? 
 
+
+## Solutions
+
+### Life insurance 
+Here are some possible inputs. There are many more.
+
+Age, gender, whether you smoke, blood pressure, BMI, pre-existing,  health conditions, family health history, amount of insurance requested
+
+### Bat species
+
+1. The independent variable is the elevation $h$
+2. The dependent variable is the number $N$ of species of bats.
+3. The statement $f(500)=200$ means that there are 200 species of bats at the height of 500 feet.
+4. I expect that this function will be decreasing because, in general, there are fewer flora and fauna at higher altitudes.
+
+### Slope and concavity
+Sketch each of the following:
+
+1. An increasing function that is concave up
+
+```{r, echo=FALSE}
+
+plotFun(x^2~x, xlim = c(0,4))
+
+```
+
+
+2. An increasing function that is concave down
+
+```{r, echo=FALSE}
+
+plotFun(x^(1/2)~x, xlim = c(0,4))
+
+```
+
+3. A decreasing function that is concave up
+
+```{r, echo=FALSE}
+
+plotFun(2-x^(1/2)~x, xlim = c(0,4))
+
+```
+
+4. A decreasing function that is concave down
+
+
+```{r, echo=FALSE}
+
+plotFun(16 - x^2~x, xlim = c(0,4))
+
+```
+
+### Relative change of the Dow Jones average 
+
+1. The relative change is
+$$
+\frac{77.90 - 169.84}{169.84} = -0.5413
+$$
+ 
+2. The relative change is
+$$
+\frac{35369.09 - 35443.28}{35443.82} =-0.0021
+$$
+
+### Measuring rainfall
+One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour. 
+
+**Time**   | 8 am | 9 | 10 | 11 | noon | 1 pm | 2 | 3 | 4 | 5 pm
+-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+**Amount** | 0.15 | 0.17 | 0.2 | 0.45 | 0.48 | 0.75 | 1.03 | 1.20 | 1.45 | 1.60
+
+1. The average rate of rainfall from 8 a.m. to 5 p.m. is
+$$
+\frac{1.60 - 0.15}{17-8} = \frac{1.45}{9} = 0.1611
+$$
+2. The units are inches per hour.
