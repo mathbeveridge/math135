@@ -1,6 +1,6 @@
 # (PART) Symbolic Derivatives {-}
 
-# Rules of Differentiation
+# 4.A Rules of Differentiation
 
 
 

@@ -1,4 +1,4 @@
-# Power Functions
+# 1.E Power Functions
 
 
 ## Goals

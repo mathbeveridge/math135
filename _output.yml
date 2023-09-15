@@ -1,4 +1,5 @@
 bookdown::gitbook:
+  number_sections: false
   highlight: haddock
   css: m135style.css
   split_by: chapter
