@@ -45,7 +45,7 @@ Find the dimension of the following quantities.
 
 1. Momentum is the product of mass and velocity.
 1. Jerk is the rate at which acceleration changes with respect to time.
-1. Voltage is the work needed per unit charge to move a test charge between two points.
+1. Voltage is the work needed per unit charge to move a test charge between two points. (You need to look up both "work" and "charge" in our list of derived dimensions.)
 
 
 
@@ -78,7 +78,6 @@ This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_char
 
 1. Sunlight deposits energy at a rate of 250 W/m$^2$ on a 10 m$^2$ garden. How much energy (in Joules) is deposited in a week? Note that 1 Watt is 1 Joule per second) 
 
-<!--
 ## Solutions
 
 ### Find the Dimension
@@ -135,5 +134,3 @@ $$
 \left( \frac{3600}{1} \frac{sec}{hr} \right)
 = 1.512 \times 10^9 \, J
 $$
-
--->
