@@ -17,10 +17,11 @@ I can ...
 
 * Find the 2D critical points of $f(x,y)$ by (simultaneously) solving $f_x(x,y)=0$ and $f_y(x,y)=0$.
 * Characterize a 2D critical point $(a,b)$ as a local minimimum, local maximum or saddle point by:
-   * Using the 2D second derivative test at $(a,b)$
-   * Making a contour plot near $(a,b)$
    * Looking at the values of $f(a,b)-f(x,y)$ on a small circle around $(a,b)$.
-   
+   * Making a contour plot near $(a,b)$
+   * Using the 2D second derivative test at $(a,b)$
+
+  
    
 ## Gradient Search
 
