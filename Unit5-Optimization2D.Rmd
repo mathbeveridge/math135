@@ -27,7 +27,7 @@ $$
    
 
 
-Among these options, #1 is the easiest to use. Here is a [ink to a desmos workbook](https://www.desmos.com/calculator/hxhiomaduw) that classifies the critical point $(2,-1)$ of the function $f(x,y)= x^2+ 2y^4+ 4xy$ by creating a table of values $f(2,1) - f(c,d)$ where the points $(c,d)$ are in a small circle around $(2,1)$.
+Among these options, #1 is the easiest to use. Here is a [link to a desmos workbook](https://www.desmos.com/calculator/hxhiomaduw) that classifies the critical point $(2,-1)$ of the function $f(x,y)= x^2+ 2y^4+ 4xy$ by creating a table of values $f(2,1) - f(c,d)$ where the points $(c,d)$ are in a small circle around $(2,1)$.
 
 Here is some R code that does the same thing. 
 
