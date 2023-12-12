@@ -170,9 +170,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
-<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
 </ul></li>
@@ -773,6 +771,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#removing-a-pollutant"><i class="fa fa-check"></i>Removing a Pollutant</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
@@ -780,6 +779,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#removing-a-pollutant-1"><i class="fa fa-check"></i>Removing a Pollutant</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
@@ -1028,7 +1028,7 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <pre><code>## [1] 100.0000 849.9633</code></pre>
 <div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="c-eulers-method.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb190-2"><a href="c-eulers-method.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-163-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-178-1.png" width="70%" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>The amount of the drug converges to 850.</li>
 </ol>
@@ -1068,7 +1068,7 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <pre><code>## [1]  50.000 377.373</code></pre>
 <div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="c-eulers-method.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb193-2"><a href="c-eulers-method.html#cb193-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-164-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-179-1.png" width="70%" /></p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\triangle t = 1\)</span></li>
 </ol>
@@ -1095,7 +1095,7 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <pre><code>## [1]  50.0000 407.5033</code></pre>
 <div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="c-eulers-method.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb196-2"><a href="c-eulers-method.html#cb196-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-165-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-180-1.png" width="70%" /></p>
 <ol start="3" style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\triangle t = 0.1\)</span></li>
 </ol>
@@ -1122,7 +1122,7 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <pre><code>## [1]  50.0000 410.4851</code></pre>
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="c-eulers-method.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb199-2"><a href="c-eulers-method.html#cb199-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-181-1.png" width="70%" /></p>
 <ol start="4" style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\triangle t = 0.01\)</span></li>
 </ol>
@@ -1149,7 +1149,7 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <pre><code>## [1]  50.0000 410.7823</code></pre>
 <div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="c-eulers-method.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb202-2"><a href="c-eulers-method.html#cb202-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-182-1.png" width="70%" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>We have
 <span class="math display">\[

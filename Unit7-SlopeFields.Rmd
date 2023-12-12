@@ -95,6 +95,15 @@ For each of the above slope fields, sketch the solution curves that satisfy
 1. $y(0) = -1$
 
 
+### Removing a Pollutant
+
+A pollutant spilled on the ground decays at a rate of 4\% a day. In addition, cleanup crews remove the pollutant at a rate of 20 gallons a day. 
+
+1. Write a differential equation for the amount of pollutant $P$, in gallons, left after $t$ days.
+1.  The initial amount of pollutant is 2000 gallons. Use the `plot_traj` command to create a trajectory for $0 \leq t \leq 50$. Set `nt=10` to show 10 tick marks on your trajectory.
+1. Use the trajectory to estimate long it takes to clean up the pollutant. In other words, when is $P(t)=0$?
+ 
+
 ### Slope Fields for Population Models
 
 Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of $P$ does the population increase without bound? stabilize to a constant value? die out? 
@@ -191,6 +200,26 @@ Here are some trajectories (not necessarily the ones that go through the three p
 </table>
 
 
+### Removing a Pollutant
+
+A pollutant spilled on the ground decays at a rate of 4\% a day. In addition, cleanup crews remove the pollutant at a rate of 20 gallons a day. 
+
+1. $\displaystyle{\frac{dP}{dt} = -0.04P - 20}$
+
+2.  
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  -0.04 * P -  20 )
+soln1 = integrateODE(dyn, domain(t=0:50), P=2000)
+traj_plot(P(t) ~ t, soln1,  nt=10)
+
+ 
+```
+
+
+3. It takes about 40 days to clean up the pollutant. That is, $P(40)=0$. 
+ 
+
 ### Slope Fields for Population Models
 
 Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of $P$ does the population increase without bound? stabilize to a constant value? die out? 
@@ -247,7 +276,7 @@ Let's set $\frac{dP}{dt}=0$ and solve to find the equilibrium points. We have
 
 ### Trajectories for Population Models
 
-Now create trajectories for the population models in the previous exercise. Create a trajectory for each of the different possible outcomes (increase without bound, stabilize to a constant value, die out) 
+Now create trajectories for the population models in the previous exercise. Create a trajectory for each of the different possible outcomes (increase without bound, stabilize to a constant value, die out).  
 
 1. Exponential growth with harvesting.
 $$
@@ -259,7 +288,7 @@ for  $0 \leq P \leq 300$ and $0 \leq t \leq 100$.
 dyn = makeODE( dP ~  0.2 * P -  40 )
 soln1 = integrateODE(dyn, domain(t=0:10), P=300)
 soln2 = integrateODE(dyn, domain(t=0:10), P=200)
-soln3 = integrateODE(dyn, domain(t=0:10), P=100)
+soln3 = integrateODE(dyn, domain(t=0:4), P=100)
 traj_plot(P(t) ~ t, soln1,  nt=0) %>%
   traj_plot(P(t) ~ t, soln2,  nt=0) %>%
   traj_plot(P(t) ~ t, soln3,  nt=0)

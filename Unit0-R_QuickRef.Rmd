@@ -543,7 +543,7 @@ P ~ 6 - 2 * P,
 bounds(t=-8:8, P=-8:8))
 ```
 
-## Creating a Trajectory in RStudio
+### Creating a Trajectory in RStudio
 
 The `mosaicCalc` package also has a `traj_plot` function that plots a solution curve to a differential equation through a given initial point.
 
@@ -561,8 +561,8 @@ In fact, we can get fancier by making a single plot that has two trajectories (o
 dyn = makeODE( dP ~  6 - 2 * P )
 soln1 = integrateODE(dyn, domain(t=0:5), P=6)
 soln2 = integrateODE(dyn, domain(t=0:5), P=2)
-traj_plot(P(t) ~ t, soln1, color="blue", nt=0) %>%
-  traj_plot(P(t) ~ t, soln2, color="magenta", nt=0) %>%
+traj_plot(P(t) ~ t, soln1, color="blue", nt=5) %>%
+  traj_plot(P(t) ~ t, soln2, color="magenta", nt=5) %>%
   vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, bounds(t=0:5, P=0:8))
 ```
 
