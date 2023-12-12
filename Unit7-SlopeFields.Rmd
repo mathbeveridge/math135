@@ -202,9 +202,9 @@ Here are some trajectories (not necessarily the ones that go through the three p
 
 ### Removing a Pollutant
 
-A pollutant spilled on the ground decays at a rate of 4\% a day. In addition, cleanup crews remove the pollutant at a rate of 20 gallons a day. 
+ 
 
-1. $\displaystyle{\frac{dP}{dt} = -0.04P - 20}$
+1. The differential equation for the pollutant removal is $$\displaystyle{\frac{dP}{dt} = -0.04P - 20}.$$
 
 2.  
 
