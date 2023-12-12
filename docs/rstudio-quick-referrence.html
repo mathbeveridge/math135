@@ -142,6 +142,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
 <ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages"><i class="fa fa-check"></i>Loading Mosaic and MosaicCalc Packages</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
@@ -168,9 +170,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
 <ul>
@@ -764,17 +768,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-27"><i class="fa fa-check"></i>Activities</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
@@ -828,6 +835,31 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="rstudio-quick-referrence" class="section level1 hasAnchor">
 <h1>RStudio Quick Referrence<a href="rstudio-quick-referrence.html#rstudio-quick-referrence" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="loading-mosaic-and-mosaiccalc-packages" class="section level2 hasAnchor">
+<h2>Loading Mosaic and MosaicCalc Packages<a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Run the following code block to load the <code>mosaic</code> and <code>mosaicCalc</code> libraries</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio-quick-referrence.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="rstudio-quick-referrence.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaic))</span>
+<span id="cb1-3"><a href="rstudio-quick-referrence.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+</div>
+<div id="troubleshooting" class="section level2 hasAnchor">
+<h2>Troubleshooting<a href="rstudio-quick-referrence.html#troubleshooting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here’s a list of some common errors and what might be wrong:</p>
+<ul>
+<li><p><em>Nothing ran, all I got was a plus sign…</em> You probably forgot some parentheses. Try the following:</p>
+<ul>
+<li>Enter a parenthesis on that line to see if this closes it out.</li>
+<li>Press the Escape key to get to a new line.</li>
+</ul></li>
+<li><p><em>Unexpected symbol in…</em> You may have forgotten a multiplication sign or otherwise gave RStudio a symbol it cannot parse. Check your line of code again to see if you have all your symbols.</p></li>
+<li><p><em>Object not found…</em> You may not have defined that variable (or function) yet. Check your environment tab to see if it has the object you’re looking for (or if you’ve called it something different than you remember!). You also may be trying to use something from a data set that you have not included as a parameter. See if you need to add in the parameter <code>data=....</code></p></li>
+<li><p><em>Could not find function…</em> RStudio doesn’t know what function you’re using. Check your capitalization and that you have the right packages installed.</p></li>
+<li><p><em>… number of items to replace is not a multiple of replacement length …</em> Your input variable doesn’t match the name variable you used in the output when you called <code>makeFun</code>. Maybe you used <code>x</code> on one side of the tilde <code>~</code> and <code>t</code> on the other side?</p></li>
+<li><p><em>Argument “name” is missing, with no default…</em>
+You’re probably trying to use <code>makeFun</code> without loading the <code>mosaic</code> package, or to take a derivative or antiderivative without the <code>mosaicCalc package</code>. See the “Loading Mosaic and MosaicCalc Packages” section at the top of this page for how to fix this.</p></li>
+<li><p><em>I can’t find my data!</em> You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.</p></li>
+</ul>
+</div>
 <div id="functions-and-data" class="section level2 hasAnchor">
 <h2>Functions and Data<a href="rstudio-quick-referrence.html#functions-and-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="common-functions" class="section level3 hasAnchor">
@@ -948,33 +980,33 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="creating-lists-of-data" class="section level3 hasAnchor">
 <h3>Creating Lists of Data<a href="rstudio-quick-referrence.html#creating-lists-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use <code>c()</code> to “combine” some values into a list. Assign the list to a variable so that you can use it later.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio-quick-referrence.html#cb1-1" aria-hidden="true" tabindex="-1"></a>my_primes <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">29</span>)</span>
-<span id="cb1-2"><a href="rstudio-quick-referrence.html#cb1-2" aria-hidden="true" tabindex="-1"></a>my_primes</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="rstudio-quick-referrence.html#cb2-1" aria-hidden="true" tabindex="-1"></a>my_primes <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">29</span>)</span>
+<span id="cb2-2"><a href="rstudio-quick-referrence.html#cb2-2" aria-hidden="true" tabindex="-1"></a>my_primes</span></code></pre></div>
 <pre><code>##  [1]  2  3  5  7 11 13 17 19 23 29</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rstudio-quick-referrence.html#cb3-1" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">15</span>)</span>
-<span id="cb3-2"><a href="rstudio-quick-referrence.html#cb3-2" aria-hidden="true" tabindex="-1"></a>my_data</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rstudio-quick-referrence.html#cb4-1" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">15</span>)</span>
+<span id="cb4-2"><a href="rstudio-quick-referrence.html#cb4-2" aria-hidden="true" tabindex="-1"></a>my_data</span></code></pre></div>
 <pre><code>## [1]   5  -2   7   3 -10  15</code></pre>
 <p>Use <code>seq()</code> to generate a sequential list of values in a specified range. The optional third parameter tells RStudio to increment by that value instead of incrementing by 1.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="rstudio-quick-referrence.html#cb5-1" aria-hidden="true" tabindex="-1"></a>my_seq1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
-<span id="cb5-2"><a href="rstudio-quick-referrence.html#cb5-2" aria-hidden="true" tabindex="-1"></a>my_seq1</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rstudio-quick-referrence.html#cb6-1" aria-hidden="true" tabindex="-1"></a>my_seq1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
+<span id="cb6-2"><a href="rstudio-quick-referrence.html#cb6-2" aria-hidden="true" tabindex="-1"></a>my_seq1</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rstudio-quick-referrence.html#cb7-1" aria-hidden="true" tabindex="-1"></a>my_seq2 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="fl">0.25</span>)</span>
-<span id="cb7-2"><a href="rstudio-quick-referrence.html#cb7-2" aria-hidden="true" tabindex="-1"></a>my_seq2</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rstudio-quick-referrence.html#cb8-1" aria-hidden="true" tabindex="-1"></a>my_seq2 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="fl">0.25</span>)</span>
+<span id="cb8-2"><a href="rstudio-quick-referrence.html#cb8-2" aria-hidden="true" tabindex="-1"></a>my_seq2</span></code></pre></div>
 <pre><code>## [1] 5.00 5.25 5.50 5.75 6.00</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="rstudio-quick-referrence.html#cb9-1" aria-hidden="true" tabindex="-1"></a>my_seq3 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="fl">0.1</span>)</span>
-<span id="cb9-2"><a href="rstudio-quick-referrence.html#cb9-2" aria-hidden="true" tabindex="-1"></a>my_seq3</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rstudio-quick-referrence.html#cb10-1" aria-hidden="true" tabindex="-1"></a>my_seq3 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="fl">0.1</span>)</span>
+<span id="cb10-2"><a href="rstudio-quick-referrence.html#cb10-2" aria-hidden="true" tabindex="-1"></a>my_seq3</span></code></pre></div>
 <pre><code>##  [1] 5.0 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 5.9 6.0</code></pre>
 </div>
 <div id="plotting-data" class="section level3 hasAnchor">
 <h3>Plotting Data<a href="rstudio-quick-referrence.html#plotting-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use <code>plotPoints</code> to plot a list of <span class="math inline">\(y\)</span>-axis data versus a list of <span class="math inline">\(x\)</span>-axis data. Separate these lists with a tilde <code>~</code>.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="rstudio-quick-referrence.html#cb11-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb11-2"><a href="rstudio-quick-referrence.html#cb11-2" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> X<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb11-3"><a href="rstudio-quick-referrence.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rstudio-quick-referrence.html#cb12-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb12-2"><a href="rstudio-quick-referrence.html#cb12-2" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> X<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb12-3"><a href="rstudio-quick-referrence.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="rstudio-quick-referrence.html#cb12-1" aria-hidden="true" tabindex="-1"></a>x_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>)</span>
-<span id="cb12-2"><a href="rstudio-quick-referrence.html#cb12-2" aria-hidden="true" tabindex="-1"></a>y_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span>
-<span id="cb12-3"><a href="rstudio-quick-referrence.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(y_data <span class="sc">~</span> x_data)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio-quick-referrence.html#cb13-1" aria-hidden="true" tabindex="-1"></a>x_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>)</span>
+<span id="cb13-2"><a href="rstudio-quick-referrence.html#cb13-2" aria-hidden="true" tabindex="-1"></a>y_data <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span>
+<span id="cb13-3"><a href="rstudio-quick-referrence.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(y_data <span class="sc">~</span> x_data)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 </div>
 <div id="plotting-functions" class="section level3 hasAnchor">
@@ -984,23 +1016,23 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li>As with <code>plotPoints</code>, we use a tilde <code>~</code> to separate the output variable (the function) from the input variable.</li>
 <li>The optional <code>xlim</code> argument specifies the domain for the plot.</li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio-quick-referrence.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x) <span class="sc">~</span> x)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rstudio-quick-referrence.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x) <span class="sc">~</span> x)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="rstudio-quick-referrence.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi))</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="rstudio-quick-referrence.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-30-2.png" width="672" /></p>
 <p>We can layer one plot on top of another by using the <code>add=TRUE</code> argument.</p>
 <ul>
 <li>You only need to specify the <code>xlim</code> for the <strong>first plot</strong> because the second one is added to the first.</li>
 <li>It’s helpful to change the color for subsequent plots. Use the argument <code>col="red"</code> using any color name you like (RStudio knows a lot of colors!)</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="rstudio-quick-referrence.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi))</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rstudio-quick-referrence.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="rstudio-quick-referrence.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>x) <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rstudio-quick-referrence.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>x) <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-31-2.png" width="672" /></p>
 <p>We can label the axes using <code>xlab</code> and <code>ylab</code>. When you are layering two plots, you must specify these labels in the first function that you plot!</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rstudio-quick-referrence.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi), <span class="at">xlab=</span><span class="st">&#39;time&#39;</span>, <span class="at">ylab=</span><span class="st">&#39;displacement&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rstudio-quick-referrence.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi), <span class="at">xlab=</span><span class="st">&#39;time&#39;</span>, <span class="at">ylab=</span><span class="st">&#39;displacement&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rstudio-quick-referrence.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>x) <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="rstudio-quick-referrence.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>x) <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-32-2.png" width="672" /></p>
 <p>The <code>plotFun</code> command takes a whole variety of parameters, here are a few useful ones:</p>
 <ul>
@@ -1011,50 +1043,50 @@ Example: <code>add=TRUE</code></li>
 <li><code>xlab</code>, <code>ylab</code>: for labeling your axes. You’ll pass this as a string as well. Example: <code>xlab="time", ylab="red=velocity, blue=position"</code></li>
 </ul>
 <p>Let’s try some of this out. I broke the third line so it would all fit, you don’t need to!</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="rstudio-quick-referrence.html#cb19-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x)</span>
-<span id="cb19-2"><a href="rstudio-quick-referrence.html#cb19-2" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>x)</span>
-<span id="cb19-3"><a href="rstudio-quick-referrence.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x)<span class="sc">~</span>x, <span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="dv">3</span>,<span class="dv">60</span>), </span>
-<span id="cb19-4"><a href="rstudio-quick-referrence.html#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;red=velocity, blue=position&quot;</span>)</span>
-<span id="cb19-5"><a href="rstudio-quick-referrence.html#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">g</span>(x)<span class="sc">~</span>x, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="rstudio-quick-referrence.html#cb20-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb20-2"><a href="rstudio-quick-referrence.html#cb20-2" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>x)</span>
+<span id="cb20-3"><a href="rstudio-quick-referrence.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x)<span class="sc">~</span>x, <span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="dv">3</span>,<span class="dv">60</span>), </span>
+<span id="cb20-4"><a href="rstudio-quick-referrence.html#cb20-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">&quot;blue&quot;</span>,<span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;red=velocity, blue=position&quot;</span>)</span>
+<span id="cb20-5"><a href="rstudio-quick-referrence.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">g</span>(x)<span class="sc">~</span>x, <span class="at">col=</span><span class="st">&quot;red&quot;</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-33-2.png" width="432" style="display: block; margin: auto;" /></p>
 <p>RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you’re adding plots together. If you want the chunk to hold all plots until the end, add <code>fig.show='hold'</code> into the script braces at the top of the chunk.</p>
 </div>
 <div id="plotting-data-and-functions" class="section level3 hasAnchor">
 <h3>Plotting Data and Functions<a href="rstudio-quick-referrence.html#plotting-data-and-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can also combine plots of data and functions using <code>add=TRUE</code>.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="rstudio-quick-referrence.html#cb20-1" aria-hidden="true" tabindex="-1"></a>time_data <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">50</span>, <span class="dv">10</span>)</span>
-<span id="cb20-2"><a href="rstudio-quick-referrence.html#cb20-2" aria-hidden="true" tabindex="-1"></a>pop_data <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">6.82</span>, <span class="fl">9.63</span>, <span class="fl">14.3</span>, <span class="fl">20.48</span>, <span class="fl">28.94</span>, <span class="fl">42.25</span>)</span>
-<span id="cb20-3"><a href="rstudio-quick-referrence.html#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="rstudio-quick-referrence.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(pop_data <span class="sc">~</span> time_data, <span class="at">xlab=</span><span class="st">&#39;years since 1950&#39;</span>, <span class="at">ylab=</span><span class="st">&#39;population (millions)&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="rstudio-quick-referrence.html#cb21-1" aria-hidden="true" tabindex="-1"></a>time_data <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">50</span>, <span class="dv">10</span>)</span>
+<span id="cb21-2"><a href="rstudio-quick-referrence.html#cb21-2" aria-hidden="true" tabindex="-1"></a>pop_data <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">6.82</span>, <span class="fl">9.63</span>, <span class="fl">14.3</span>, <span class="fl">20.48</span>, <span class="fl">28.94</span>, <span class="fl">42.25</span>)</span>
+<span id="cb21-3"><a href="rstudio-quick-referrence.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="rstudio-quick-referrence.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(pop_data <span class="sc">~</span> time_data, <span class="at">xlab=</span><span class="st">&#39;years since 1950&#39;</span>, <span class="at">ylab=</span><span class="st">&#39;population (millions)&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="rstudio-quick-referrence.html#cb21-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="fl">6.82</span> <span class="sc">*</span> (<span class="fl">1.037</span>)<span class="sc">^</span>t <span class="sc">~</span> t)</span>
-<span id="cb21-2"><a href="rstudio-quick-referrence.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="rstudio-quick-referrence.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="rstudio-quick-referrence.html#cb22-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="fl">6.82</span> <span class="sc">*</span> (<span class="fl">1.037</span>)<span class="sc">^</span>t <span class="sc">~</span> t)</span>
+<span id="cb22-2"><a href="rstudio-quick-referrence.html#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="rstudio-quick-referrence.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-34-2.png" width="672" /></p>
 </div>
 <div id="fitting-a-function-to-data" class="section level3 hasAnchor">
 <h3>Fitting a Function to Data<a href="rstudio-quick-referrence.html#fitting-a-function-to-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>fitModel</code> command is part of the mosaic package. Here is how you would fit a linear model to data</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="rstudio-quick-referrence.html#cb22-1" aria-hidden="true" tabindex="-1"></a>xdata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb22-2"><a href="rstudio-quick-referrence.html#cb22-2" aria-hidden="true" tabindex="-1"></a>ydata <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">5.3</span>, <span class="fl">7.7</span>, <span class="fl">10.1</span>, <span class="fl">11.3</span>, <span class="fl">12.0</span>    )</span>
-<span id="cb22-3"><a href="rstudio-quick-referrence.html#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="rstudio-quick-referrence.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fitModel</span>(ydata  <span class="sc">~</span> A<span class="sc">*</span> xdata  <span class="sc">+</span> B)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="rstudio-quick-referrence.html#cb23-1" aria-hidden="true" tabindex="-1"></a>xdata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb23-2"><a href="rstudio-quick-referrence.html#cb23-2" aria-hidden="true" tabindex="-1"></a>ydata <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">5.3</span>, <span class="fl">7.7</span>, <span class="fl">10.1</span>, <span class="fl">11.3</span>, <span class="fl">12.0</span>    )</span>
+<span id="cb23-3"><a href="rstudio-quick-referrence.html#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="rstudio-quick-referrence.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fitModel</span>(ydata  <span class="sc">~</span> A<span class="sc">*</span> xdata  <span class="sc">+</span> B)</span></code></pre></div>
 <pre><code>## function (xdata, ..., transformation = function (x) 
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-## &lt;environment: 0x7fd38fb2b6f0&gt;
+## &lt;environment: 0x7fac97bdd768&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
 ## attr(,&quot;class&quot;)
 ## [1] &quot;nlsfunction&quot; &quot;function&quot;</code></pre>
 <p>This output says that the best fitting linear function has slope <span class="math inline">\(A=1.70\)</span> and <span class="math inline">\(y\)</span>-intercept <span class="math inline">\(B=4.18\)</span>. So let’s create the corresponding linear function and plot it with the data.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="rstudio-quick-referrence.html#cb24-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">1.70</span> <span class="sc">*</span>  x <span class="sc">+</span> <span class="fl">4.18</span> <span class="sc">~</span> x)</span>
-<span id="cb24-2"><a href="rstudio-quick-referrence.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="rstudio-quick-referrence.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(ydata <span class="sc">~</span> xdata)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="rstudio-quick-referrence.html#cb25-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">1.70</span> <span class="sc">*</span>  x <span class="sc">+</span> <span class="fl">4.18</span> <span class="sc">~</span> x)</span>
+<span id="cb25-2"><a href="rstudio-quick-referrence.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="rstudio-quick-referrence.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(ydata <span class="sc">~</span> xdata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="rstudio-quick-referrence.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x) <span class="sc">~</span> x,  <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rstudio-quick-referrence.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x) <span class="sc">~</span> x,  <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-36-2.png" width="672" /></p>
 <div id="fitting-a-power-function-to-data" class="section level4 hasAnchor">
 <h4>Fitting a Power Function to Data<a href="rstudio-quick-referrence.html#fitting-a-power-function-to-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1065,35 +1097,35 @@ Example: <code>add=TRUE</code></li>
 <li>The original constants are <code>p = A</code> and <code>c = exp(B)</code></li>
 </ol>
 <p>Here is an example</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rstudio-quick-referrence.html#cb26-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">4.3</span> <span class="sc">*</span> x<span class="sc">^</span>(<span class="fl">1.7</span>)<span class="sc">~</span>x)</span>
-<span id="cb26-2"><a href="rstudio-quick-referrence.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="rstudio-quick-referrence.html#cb26-3" aria-hidden="true" tabindex="-1"></a>xdata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>)</span>
-<span id="cb26-4"><a href="rstudio-quick-referrence.html#cb26-4" aria-hidden="true" tabindex="-1"></a>ydata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">33</span>, <span class="dv">65</span>, <span class="dv">110</span>, <span class="dv">180</span>)</span>
-<span id="cb26-5"><a href="rstudio-quick-referrence.html#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-6"><a href="rstudio-quick-referrence.html#cb26-6" aria-hidden="true" tabindex="-1"></a>logxdata <span class="ot">=</span> <span class="fu">log</span>(xdata)</span>
-<span id="cb26-7"><a href="rstudio-quick-referrence.html#cb26-7" aria-hidden="true" tabindex="-1"></a>logydata <span class="ot">=</span> <span class="fu">log</span>(ydata)</span>
-<span id="cb26-8"><a href="rstudio-quick-referrence.html#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-9"><a href="rstudio-quick-referrence.html#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="fu">fitModel</span>(logydata <span class="sc">~</span> A <span class="sc">*</span> logxdata <span class="sc">+</span> B)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="rstudio-quick-referrence.html#cb27-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">4.3</span> <span class="sc">*</span> x<span class="sc">^</span>(<span class="fl">1.7</span>)<span class="sc">~</span>x)</span>
+<span id="cb27-2"><a href="rstudio-quick-referrence.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="rstudio-quick-referrence.html#cb27-3" aria-hidden="true" tabindex="-1"></a>xdata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>)</span>
+<span id="cb27-4"><a href="rstudio-quick-referrence.html#cb27-4" aria-hidden="true" tabindex="-1"></a>ydata <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">33</span>, <span class="dv">65</span>, <span class="dv">110</span>, <span class="dv">180</span>)</span>
+<span id="cb27-5"><a href="rstudio-quick-referrence.html#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="rstudio-quick-referrence.html#cb27-6" aria-hidden="true" tabindex="-1"></a>logxdata <span class="ot">=</span> <span class="fu">log</span>(xdata)</span>
+<span id="cb27-7"><a href="rstudio-quick-referrence.html#cb27-7" aria-hidden="true" tabindex="-1"></a>logydata <span class="ot">=</span> <span class="fu">log</span>(ydata)</span>
+<span id="cb27-8"><a href="rstudio-quick-referrence.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="rstudio-quick-referrence.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">fitModel</span>(logydata <span class="sc">~</span> A <span class="sc">*</span> logxdata <span class="sc">+</span> B)</span></code></pre></div>
 <pre><code>## function (logxdata, ..., transformation = function (x) 
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-## &lt;environment: 0x7fd39f9c5660&gt;
+## &lt;environment: 0x7fac91818ac8&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
 ## attr(,&quot;class&quot;)
 ## [1] &quot;nlsfunction&quot; &quot;function&quot;</code></pre>
 <p>This tells us that <span class="math inline">\(A=1.45\)</span> and <span class="math inline">\(B=1.92\)</span>. We solve for <span class="math inline">\(c\)</span> and plot the function with the data</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="rstudio-quick-referrence.html#cb28-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fl">1.45</span></span>
-<span id="cb28-2"><a href="rstudio-quick-referrence.html#cb28-2" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="rstudio-quick-referrence.html#cb29-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="fl">1.45</span></span>
+<span id="cb29-2"><a href="rstudio-quick-referrence.html#cb29-2" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
 <pre><code>## [1] 1.45</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rstudio-quick-referrence.html#cb30-1" aria-hidden="true" tabindex="-1"></a>c <span class="ot">=</span> <span class="fu">exp</span>(<span class="fl">1.92</span>)</span>
-<span id="cb30-2"><a href="rstudio-quick-referrence.html#cb30-2" aria-hidden="true" tabindex="-1"></a>c</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="rstudio-quick-referrence.html#cb31-1" aria-hidden="true" tabindex="-1"></a>c <span class="ot">=</span> <span class="fu">exp</span>(<span class="fl">1.92</span>)</span>
+<span id="cb31-2"><a href="rstudio-quick-referrence.html#cb31-2" aria-hidden="true" tabindex="-1"></a>c</span></code></pre></div>
 <pre><code>## [1] 6.820958</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="rstudio-quick-referrence.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(ydata <span class="sc">~</span> xdata)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="rstudio-quick-referrence.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(ydata <span class="sc">~</span> xdata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="rstudio-quick-referrence.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fl">6.82</span> <span class="sc">*</span> x<span class="sc">^</span><span class="fl">1.45</span> <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rstudio-quick-referrence.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fl">6.82</span> <span class="sc">*</span> x<span class="sc">^</span><span class="fl">1.45</span> <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-38-2.png" width="672" /></p>
 </div>
 <div id="fitting-a-model-by-specifying-starting-values" class="section level4 hasAnchor">
@@ -1104,34 +1136,41 @@ Example: <code>add=TRUE</code></li>
 <li>The command <code>fitModel</code> does find a function, but when we plot it, we realize that it’s not what we want.</li>
 </ul>
 <p>Here is an example of <code>fitModel</code> returning a function that we don’t like. Let’s load in the `utilities.csv’ data set and look at the first few rows.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rstudio-quick-referrence.html#cb34-1" aria-hidden="true" tabindex="-1"></a>utilitydata <span class="ot">=</span> fetch<span class="sc">::</span><span class="fu">fetchData</span>(<span class="st">&quot;utilities.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="rstudio-quick-referrence.html#cb35-1" aria-hidden="true" tabindex="-1"></a>utilitydata <span class="ot">=</span> fetch<span class="sc">::</span><span class="fu">fetchData</span>(<span class="st">&quot;utilities.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Retrieving from http://www.mosaic-web.org/go/datasets/utilities.csv</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rstudio-quick-referrence.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(utilitydata)</span></code></pre></div>
-<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill elecbill notes
-## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63    47.08      
-## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05    62.80      
-## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92    71.04      
-## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51    71.75      
-## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18    93.29      
-## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25    96.21</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="rstudio-quick-referrence.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(utilitydata)</span></code></pre></div>
+<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill
+## 1     2  24 2005   29  557 166          6.0  28    213.71
+## 2     3  29 2005   31  772 179          5.5  33    239.85
+## 3     1  27 2005   15  891 224          7.5  30    294.96
+## 4    11  23 2004   43  860  82          2.8  29    160.26
+## 5    12  28 2004   23 1160 208          6.0  35    317.47
+## 6     9  26 2004   71  922  15          0.5  32    117.46
+##   gasbill elecbill notes
+## 1  166.63    47.08      
+## 2  117.05    62.80      
+## 3  223.92    71.04      
+## 4   88.51    71.75      
+## 5  224.18    93.29      
+## 6   21.25    96.21</code></pre>
 <p>Now let’s plot temperature versus month</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rstudio-quick-referrence.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(temp <span class="sc">~</span> month, <span class="at">data=</span>utilitydata)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="rstudio-quick-referrence.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(temp <span class="sc">~</span> month, <span class="at">data=</span>utilitydata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
 <p>We have ploted monthly temperature data for multiple years. Let’s try to fit a periodic function.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="rstudio-quick-referrence.html#cb39-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">=</span> <span class="fu">fitModel</span>(temp <span class="sc">~</span> A <span class="sc">*</span> <span class="fu">sin</span>(w<span class="sc">*</span>(month <span class="sc">+</span> p))<span class="sc">+</span>C, <span class="at">data=</span>utilitydata)</span>
-<span id="cb39-2"><a href="rstudio-quick-referrence.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rstudio-quick-referrence.html#cb40-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">=</span> <span class="fu">fitModel</span>(temp <span class="sc">~</span> A <span class="sc">*</span> <span class="fu">sin</span>(w<span class="sc">*</span>(month <span class="sc">+</span> p))<span class="sc">+</span>C, <span class="at">data=</span>utilitydata)</span>
+<span id="cb40-2"><a href="rstudio-quick-referrence.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M)</span></code></pre></div>
 <pre><code>##         A         w         p         C 
 ## -28.67993  -6.78753  56.15894  47.20908</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="rstudio-quick-referrence.html#cb41-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">28.7</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="sc">-</span><span class="fl">6.8</span><span class="sc">*</span>(t <span class="sc">+</span> <span class="fl">56.2</span>))<span class="sc">+</span><span class="fl">47.2</span> <span class="sc">~</span> t)</span>
-<span id="cb41-2"><a href="rstudio-quick-referrence.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(t)<span class="sc">~</span>t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rstudio-quick-referrence.html#cb42-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">28.7</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="sc">-</span><span class="fl">6.8</span><span class="sc">*</span>(t <span class="sc">+</span> <span class="fl">56.2</span>))<span class="sc">+</span><span class="fl">47.2</span> <span class="sc">~</span> t)</span>
+<span id="cb42-2"><a href="rstudio-quick-referrence.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(t)<span class="sc">~</span>t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
 <p>This is not what we wanted! It looks like <code>fitModel</code> was confused by the multiple data points for each month. So the frequency <code>w</code> is completely wrong. We can correct this by specifying an initial guess for <code>w</code>. We think that the period should be 12 months, so we want to start with <code>w=2*pi/12</code>.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rstudio-quick-referrence.html#cb42-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">=</span> <span class="fu">fitModel</span>(temp <span class="sc">~</span> A <span class="sc">*</span> <span class="fu">sin</span>(w<span class="sc">*</span>(month <span class="sc">+</span> p))<span class="sc">+</span>C, <span class="at">data=</span>utilitydata, <span class="at">start=</span><span class="fu">list</span>(<span class="at">w=</span><span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span>))</span>
-<span id="cb42-2"><a href="rstudio-quick-referrence.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="rstudio-quick-referrence.html#cb43-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">=</span> <span class="fu">fitModel</span>(temp <span class="sc">~</span> A <span class="sc">*</span> <span class="fu">sin</span>(w<span class="sc">*</span>(month <span class="sc">+</span> p))<span class="sc">+</span>C, <span class="at">data=</span>utilitydata, <span class="at">start=</span><span class="fu">list</span>(<span class="at">w=</span><span class="dv">2</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">12</span>))</span>
+<span id="cb43-2"><a href="rstudio-quick-referrence.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M)</span></code></pre></div>
 <pre><code>##           w           A           p           C 
 ##   0.5043435 -28.6799747 -22.8387987  47.2090049</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="rstudio-quick-referrence.html#cb44-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">28.7</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="fl">0.5</span><span class="sc">*</span>(t <span class="sc">-</span><span class="fl">22.8</span>))<span class="sc">+</span><span class="fl">47.2</span> <span class="sc">~</span> t)</span>
-<span id="cb44-2"><a href="rstudio-quick-referrence.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(t)<span class="sc">~</span>t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="rstudio-quick-referrence.html#cb45-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">28.7</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="fl">0.5</span><span class="sc">*</span>(t <span class="sc">-</span><span class="fl">22.8</span>))<span class="sc">+</span><span class="fl">47.2</span> <span class="sc">~</span> t)</span>
+<span id="cb45-2"><a href="rstudio-quick-referrence.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(t)<span class="sc">~</span>t, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 <p>That looks much better!</p>
 </div>
@@ -1139,18 +1178,18 @@ Example: <code>add=TRUE</code></li>
 <div id="plotting-surfaces-in-3d" class="section level3 hasAnchor">
 <h3>Plotting Surfaces in 3D<a href="rstudio-quick-referrence.html#plotting-surfaces-in-3d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We plot functions <span class="math inline">\(z = f(x,y)\)</span> using the <code>plotFun()</code> command. We specify the independent variables with the syntax <code>~ x&amp;y</code>. By default, RStudio will create a <strong>contour plot</strong> of this function and include <strong>shading</strong> to help visualize the values of the function.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="rstudio-quick-referrence.html#cb45-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb45-2"><a href="rstudio-quick-referrence.html#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-3"><a href="rstudio-quick-referrence.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rstudio-quick-referrence.html#cb46-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb46-2"><a href="rstudio-quick-referrence.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="rstudio-quick-referrence.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <p>You can add more contours using the <code>levels</code> parameter, and turn off the shading with the <code>filled</code> parameter.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rstudio-quick-referrence.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span> ,<span class="dv">1</span>, .<span class="dv">2</span>), <span class="at">filled =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="rstudio-quick-referrence.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1</span> ,<span class="dv">1</span>, .<span class="dv">2</span>), <span class="at">filled =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 <p>You can change the plot range using <code>xlim</code> and <code>ylim</code>.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="rstudio-quick-referrence.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rstudio-quick-referrence.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
 <p>You can create a 3D plot by setting <code>surface=TRUE</code>.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rstudio-quick-referrence.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">surface=</span><span class="cn">TRUE</span>, <span class="at">alpha=</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="rstudio-quick-referrence.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="at">surface=</span><span class="cn">TRUE</span>, <span class="at">alpha=</span><span class="dv">1</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 </div>
 </div>
@@ -1164,11 +1203,12 @@ f&#39;(x) \approx\frac{f(x+\alpha)-f(x)}{\alpha}
 \]</span>
 for some small number <span class="math inline">\(\alpha &gt; 0\)</span>. Smaller and smaller <span class="math inline">\(\alpha\)</span>’s lead to better and better approximations.</p>
 <p>So we can estimate the derivative by using smaller and smaller <span class="math inline">\(\alpha\)</span> values until our estimates stabilize. Here is an example that estimates <span class="math inline">\(f&#39;(4)\)</span> for the function <span class="math inline">\(f(x) = x^2 + 10*\sin(x)\)</span>.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="rstudio-quick-referrence.html#cb49-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">10</span><span class="sc">*</span><span class="fu">sin</span>(x)<span class="sc">~</span>x)</span>
-<span id="cb49-2"><a href="rstudio-quick-referrence.html#cb49-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
-<span id="cb49-3"><a href="rstudio-quick-referrence.html#cb49-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">f</span>(<span class="dv">4</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">f</span>(<span class="dv">4</span>))<span class="sc">/</span>alpha</span>
-<span id="cb49-4"><a href="rstudio-quick-referrence.html#cb49-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612 1.463569 1.463564</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="rstudio-quick-referrence.html#cb50-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">10</span><span class="sc">*</span><span class="fu">sin</span>(x)<span class="sc">~</span>x)</span>
+<span id="cb50-2"><a href="rstudio-quick-referrence.html#cb50-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
+<span id="cb50-3"><a href="rstudio-quick-referrence.html#cb50-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">f</span>(<span class="dv">4</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">f</span>(<span class="dv">4</span>))<span class="sc">/</span>alpha</span>
+<span id="cb50-4"><a href="rstudio-quick-referrence.html#cb50-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
+<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612
+## [7] 1.463569 1.463564</code></pre>
 <p>The estimates stabilize to the value <span class="math inline">\(1.46356\)</span>. So our estimate is <span class="math inline">\(f&#39;(4) \approx 1.46456\)</span></p>
 </div>
 <div id="estimating-the-partial-derivative" class="section level3 hasAnchor">
@@ -1180,18 +1220,20 @@ for some small number <span class="math inline">\(\alpha &gt; 0\)</span>. Smalle
 \frac{\partial g}{\partial y} \approx\frac{g(x,y+\alpha)-f(x,y)}{\alpha}
 \]</span>
 Let’s estimate the partial derivatives of <span class="math inline">\(g(x,y) = e^{x \sin(y)}\)</span> at the point <span class="math inline">\((2, 7)\)</span>. First, let’s estimate <span class="math inline">\(g_x(2,7) = \left. \frac{\partial g}{\partial x} \right|_{(2,7)}\)</span>. The code is very similar to the code we used for a single variable function.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="rstudio-quick-referrence.html#cb51-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb51-2"><a href="rstudio-quick-referrence.html#cb51-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
-<span id="cb51-3"><a href="rstudio-quick-referrence.html#cb51-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span><span class="sc">+</span>alpha,<span class="dv">7</span>)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
-<span id="cb51-4"><a href="rstudio-quick-referrence.html#cb51-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608 2.444601 2.444600</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="rstudio-quick-referrence.html#cb52-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb52-2"><a href="rstudio-quick-referrence.html#cb52-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
+<span id="cb52-3"><a href="rstudio-quick-referrence.html#cb52-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span><span class="sc">+</span>alpha,<span class="dv">7</span>)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
+<span id="cb52-4"><a href="rstudio-quick-referrence.html#cb52-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
+<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608
+## [7] 2.444601 2.444600</code></pre>
 <p>We conclude that <span class="math inline">\(g_x(2,7) \approx 2.445.\)</span></p>
 <p>Now let’s estimate <span class="math inline">\(g_y(2,7) = \left. \frac{\partial g}{\partial y} \right|_{(2,7)}\)</span>. All we need to do is move <code>alpha</code> into the <span class="math inline">\(y\)</span>-variable.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="rstudio-quick-referrence.html#cb53-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb53-2"><a href="rstudio-quick-referrence.html#cb53-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
-<span id="cb53-3"><a href="rstudio-quick-referrence.html#cb53-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
-<span id="cb53-4"><a href="rstudio-quick-referrence.html#cb53-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450 5.610434 5.610433</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="rstudio-quick-referrence.html#cb54-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb54-2"><a href="rstudio-quick-referrence.html#cb54-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
+<span id="cb54-3"><a href="rstudio-quick-referrence.html#cb54-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
+<span id="cb54-4"><a href="rstudio-quick-referrence.html#cb54-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
+<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450
+## [7] 5.610434 5.610433</code></pre>
 <p>We conclude that <span class="math inline">\(g_y(2,7) \approx 5.610.\)</span></p>
 </div>
 <div id="gradient-search" class="section level3 hasAnchor">
@@ -1207,20 +1249,20 @@ whose partial derivatives are
 \frac{\partial f}{\partial x} = 10 x + 2 - 16 y
 \]</span></p>
 <p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="rstudio-quick-referrence.html#cb55-1" aria-hidden="true" tabindex="-1"></a>partialx<span class="ot">=</span><span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb55-2"><a href="rstudio-quick-referrence.html#cb55-2" aria-hidden="true" tabindex="-1"></a>partialy<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb55-3"><a href="rstudio-quick-referrence.html#cb55-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb55-4"><a href="rstudio-quick-referrence.html#cb55-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="rstudio-quick-referrence.html#cb56-1" aria-hidden="true" tabindex="-1"></a>partialx<span class="ot">=</span><span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb56-2"><a href="rstudio-quick-referrence.html#cb56-2" aria-hidden="true" tabindex="-1"></a>partialy<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb56-3"><a href="rstudio-quick-referrence.html#cb56-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb56-4"><a href="rstudio-quick-referrence.html#cb56-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
 <p>Next, you repeatedly run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This is equivilant to taking a small step in the uphill direction.</p>
 <p>Repeatedly to run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="rstudio-quick-referrence.html#cb56-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
-<span id="cb56-2"><a href="rstudio-quick-referrence.html#cb56-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
-<span id="cb56-3"><a href="rstudio-quick-referrence.html#cb56-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span>slopex</span>
-<span id="cb56-4"><a href="rstudio-quick-referrence.html#cb56-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span>slopey</span>
-<span id="cb56-5"><a href="rstudio-quick-referrence.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
-<span id="cb56-6"><a href="rstudio-quick-referrence.html#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
-<span id="cb56-7"><a href="rstudio-quick-referrence.html#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
-<span id="cb56-8"><a href="rstudio-quick-referrence.html#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="rstudio-quick-referrence.html#cb57-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb57-2"><a href="rstudio-quick-referrence.html#cb57-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb57-3"><a href="rstudio-quick-referrence.html#cb57-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span>slopex</span>
+<span id="cb57-4"><a href="rstudio-quick-referrence.html#cb57-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span>slopey</span>
+<span id="cb57-5"><a href="rstudio-quick-referrence.html#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb57-6"><a href="rstudio-quick-referrence.html#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
+<span id="cb57-7"><a href="rstudio-quick-referrence.html#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb57-8"><a href="rstudio-quick-referrence.html#cb57-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
 <p>Repeatedly running this code block will take you to the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum.</p>
 <p>If you want to find a local minimum, then you should multiply the partials by <code>-0.1</code> instead. This is equivalent to taking a small step downhill. Try this on the function <span class="math inline">\(f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2\)</span>.</p>
 </div>
@@ -1228,23 +1270,23 @@ whose partial derivatives are
 <h3>Constrained Optimization<a href="rstudio-quick-referrence.html#constrained-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose that we want to find the maximum of the production function <span class="math inline">\(P(x,y)=3000x^{0.2}y^{0.8}\)</span> given the constraint <span class="math inline">\(Q(x,y)= 4x + 3y = 200\)</span>.</p>
 <p>We want to make a contour plot of <span class="math inline">\(P(x,y)\)</span> and then add the constraint. The maximum value is achieved where the constraint <span class="math inline">\(Q(x,y)=300\)</span> is tangent to the contour curve of <span class="math inline">\(P(x,y)\)</span>.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="rstudio-quick-referrence.html#cb57-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="fl">0.2</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="fl">0.8</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb57-2"><a href="rstudio-quick-referrence.html#cb57-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">4</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb57-3"><a href="rstudio-quick-referrence.html#cb57-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-4"><a href="rstudio-quick-referrence.html#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">80</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">80</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">80</span>,<span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rstudio-quick-referrence.html#cb58-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="fl">0.2</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="fl">0.8</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb58-2"><a href="rstudio-quick-referrence.html#cb58-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">4</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb58-3"><a href="rstudio-quick-referrence.html#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="rstudio-quick-referrence.html#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">80</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">80</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">80</span>,<span class="dv">5</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rstudio-quick-referrence.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="rstudio-quick-referrence.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-53-2.png" width="672" /></p>
 <p>In this case, the optimal value of <span class="math inline">\(38\)</span> is achieved at approximately <span class="math inline">\((10, 55)\)</span>. Let’s make another plot to get a better estimate.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="rstudio-quick-referrence.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rstudio-quick-referrence.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">2</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rstudio-quick-referrence.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="rstudio-quick-referrence.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-54-2.png" width="672" />
 On this zoomed in plot, we can refine our estimate a bit. The maximum <span class="math inline">\(f(10,53)=38\)</span> is achieved at <span class="math inline">\(x=10\)</span> and <span class="math inline">\(y=53\)</span>.</p>
 <p>Now, if I want to estimate the Lagrange multiplier <span class="math inline">\(\lambda\)</span>, I would change my constraint a little bit (say to <span class="math inline">\(210\)</span>) and then look at the change in the optimal value.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="rstudio-quick-referrence.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="rstudio-quick-referrence.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">2</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="rstudio-quick-referrence.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">210</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rstudio-quick-referrence.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">210</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-55-2.png" width="672" /></p>
 <p>We have
 <span class="math display">\[
@@ -1259,14 +1301,14 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <h3>Estimating the Definite Integral<a href="rstudio-quick-referrence.html#estimating-the-definite-integral" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The define integral <span class="math inline">\(\int_{a}^b f(x) dx\)</span> is the signed area between the curve <span class="math inline">\(y=f(x)\)</span> and the <span class="math inline">\(x\)</span>-axis. We approximate this area by partitioning the interval <span class="math inline">\([a,b]\)</span> into smaller intervals of width <span class="math inline">\(\triangle x\)</span> and then summing the areas <span class="math inline">\(f(x) \triangle x\)</span> of the corresponding rectangles.</p>
 <p>Here is code that makes this approximation for the function <span class="math inline">\(f(x) = x + \sin(x^2)\)</span> over the interval <span class="math inline">\([5,10]\)</span>. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of <code>base=(b-a)/100</code> to a much larger number, for example: <code>base=(b-a)/1000000</code>.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rstudio-quick-referrence.html#cb63-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x <span class="sc">+</span> <span class="fu">sin</span>(x<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x)</span>
-<span id="cb63-2"><a href="rstudio-quick-referrence.html#cb63-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">5</span></span>
-<span id="cb63-3"><a href="rstudio-quick-referrence.html#cb63-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">10</span></span>
-<span id="cb63-4"><a href="rstudio-quick-referrence.html#cb63-4" aria-hidden="true" tabindex="-1"></a>base<span class="ot">=</span>(b<span class="sc">-</span>a)<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb63-5"><a href="rstudio-quick-referrence.html#cb63-5" aria-hidden="true" tabindex="-1"></a>points<span class="ot">=</span><span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb63-6"><a href="rstudio-quick-referrence.html#cb63-6" aria-hidden="true" tabindex="-1"></a>heights<span class="ot">=</span><span class="fu">f</span>(points)</span>
-<span id="cb63-7"><a href="rstudio-quick-referrence.html#cb63-7" aria-hidden="true" tabindex="-1"></a>areas<span class="ot">=</span>base<span class="sc">*</span>heights</span>
-<span id="cb63-8"><a href="rstudio-quick-referrence.html#cb63-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="rstudio-quick-referrence.html#cb64-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x <span class="sc">+</span> <span class="fu">sin</span>(x<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x)</span>
+<span id="cb64-2"><a href="rstudio-quick-referrence.html#cb64-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">5</span></span>
+<span id="cb64-3"><a href="rstudio-quick-referrence.html#cb64-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">10</span></span>
+<span id="cb64-4"><a href="rstudio-quick-referrence.html#cb64-4" aria-hidden="true" tabindex="-1"></a>base<span class="ot">=</span>(b<span class="sc">-</span>a)<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb64-5"><a href="rstudio-quick-referrence.html#cb64-5" aria-hidden="true" tabindex="-1"></a>points<span class="ot">=</span><span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb64-6"><a href="rstudio-quick-referrence.html#cb64-6" aria-hidden="true" tabindex="-1"></a>heights<span class="ot">=</span><span class="fu">f</span>(points)</span>
+<span id="cb64-7"><a href="rstudio-quick-referrence.html#cb64-7" aria-hidden="true" tabindex="-1"></a>areas<span class="ot">=</span>base<span class="sc">*</span>heights</span>
+<span id="cb64-8"><a href="rstudio-quick-referrence.html#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 37.67298</code></pre>
 </div>
 </div>
@@ -1281,45 +1323,62 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <li>End time <span class="math inline">\(T=9\)</span></li>
 <li>Step size <span class="math inline">\(\triangle t = 0.01\)</span></li>
 </ul>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="rstudio-quick-referrence.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
-<span id="cb65-2"><a href="rstudio-quick-referrence.html#cb65-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb65-3"><a href="rstudio-quick-referrence.html#cb65-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb65-4"><a href="rstudio-quick-referrence.html#cb65-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb65-5"><a href="rstudio-quick-referrence.html#cb65-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">9</span></span>
-<span id="cb65-6"><a href="rstudio-quick-referrence.html#cb65-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
-<span id="cb65-7"><a href="rstudio-quick-referrence.html#cb65-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
-<span id="cb65-8"><a href="rstudio-quick-referrence.html#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
-<span id="cb65-9"><a href="rstudio-quick-referrence.html#cb65-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
-<span id="cb65-10"><a href="rstudio-quick-referrence.html#cb65-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
-<span id="cb65-11"><a href="rstudio-quick-referrence.html#cb65-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
-<span id="cb65-12"><a href="rstudio-quick-referrence.html#cb65-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
-<span id="cb65-13"><a href="rstudio-quick-referrence.html#cb65-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
-<span id="cb65-14"><a href="rstudio-quick-referrence.html#cb65-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
-<span id="cb65-15"><a href="rstudio-quick-referrence.html#cb65-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
-<span id="cb65-16"><a href="rstudio-quick-referrence.html#cb65-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
-<span id="cb65-17"><a href="rstudio-quick-referrence.html#cb65-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
-<span id="cb65-18"><a href="rstudio-quick-referrence.html#cb65-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb65-19"><a href="rstudio-quick-referrence.html#cb65-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
-<span id="cb65-20"><a href="rstudio-quick-referrence.html#cb65-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rstudio-quick-referrence.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
+<span id="cb66-2"><a href="rstudio-quick-referrence.html#cb66-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb66-3"><a href="rstudio-quick-referrence.html#cb66-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb66-4"><a href="rstudio-quick-referrence.html#cb66-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb66-5"><a href="rstudio-quick-referrence.html#cb66-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">9</span></span>
+<span id="cb66-6"><a href="rstudio-quick-referrence.html#cb66-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb66-7"><a href="rstudio-quick-referrence.html#cb66-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
+<span id="cb66-8"><a href="rstudio-quick-referrence.html#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
+<span id="cb66-9"><a href="rstudio-quick-referrence.html#cb66-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
+<span id="cb66-10"><a href="rstudio-quick-referrence.html#cb66-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
+<span id="cb66-11"><a href="rstudio-quick-referrence.html#cb66-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
+<span id="cb66-12"><a href="rstudio-quick-referrence.html#cb66-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
+<span id="cb66-13"><a href="rstudio-quick-referrence.html#cb66-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
+<span id="cb66-14"><a href="rstudio-quick-referrence.html#cb66-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
+<span id="cb66-15"><a href="rstudio-quick-referrence.html#cb66-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
+<span id="cb66-16"><a href="rstudio-quick-referrence.html#cb66-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
+<span id="cb66-17"><a href="rstudio-quick-referrence.html#cb66-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
+<span id="cb66-18"><a href="rstudio-quick-referrence.html#cb66-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb66-19"><a href="rstudio-quick-referrence.html#cb66-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
+<span id="cb66-20"><a href="rstudio-quick-referrence.html#cb66-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
 <pre><code>## [1] 9 3</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="rstudio-quick-referrence.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
-<span id="cb67-2"><a href="rstudio-quick-referrence.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="rstudio-quick-referrence.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
+<span id="cb68-2"><a href="rstudio-quick-referrence.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 </div>
 <div id="slope-fields" class="section level3 hasAnchor">
 <h3>Slope Fields<a href="rstudio-quick-referrence.html#slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="rstudio-quick-referrence.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="rstudio-quick-referrence.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 5 - 2 P}\)</span></p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="rstudio-quick-referrence.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb69-2"><a href="rstudio-quick-referrence.html#cb69-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
-<span id="cb69-3"><a href="rstudio-quick-referrence.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="rstudio-quick-referrence.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb70-2"><a href="rstudio-quick-referrence.html#cb70-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb70-3"><a href="rstudio-quick-referrence.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 </div>
+</div>
+<div id="creating-a-trajectory-in-rstudio" class="section level2 hasAnchor">
+<h2>Creating a Trajectory in RStudio<a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <code>mosaicCalc</code> package also has a <code>traj_plot</code> function that plots a solution curve to a differential equation through a given initial point.</p>
+<p>Here is the code to plot the trajectory starting at <span class="math inline">\(P(0)=6\)</span> for the differential equation <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 6 - 2 P}\)</span>. In the code below, the <code>nt</code> parameter indicated the number of “tick marks” to use along the trajectory.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="rstudio-quick-referrence.html#cb71-1" aria-hidden="true" tabindex="-1"></a>dyn <span class="ot">=</span> <span class="fu">makeODE</span>( dP <span class="sc">~</span>  <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P )</span>
+<span id="cb71-2"><a href="rstudio-quick-referrence.html#cb71-2" aria-hidden="true" tabindex="-1"></a>soln <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">P=</span><span class="dv">6</span>)</span>
+<span id="cb71-3"><a href="rstudio-quick-referrence.html#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln,  <span class="at">nt=</span><span class="dv">5</span>) </span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p>In fact, we can get fancier by making a single plot that has two trajectories (one for <span class="math inline">\(P(0)=6\)</span> and one for <span class="math inline">\(P(0)=2\)</span>) along with the vector field.</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="rstudio-quick-referrence.html#cb72-1" aria-hidden="true" tabindex="-1"></a>dyn <span class="ot">=</span> <span class="fu">makeODE</span>( dP <span class="sc">~</span>  <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P )</span>
+<span id="cb72-2"><a href="rstudio-quick-referrence.html#cb72-2" aria-hidden="true" tabindex="-1"></a>soln1 <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">P=</span><span class="dv">6</span>)</span>
+<span id="cb72-3"><a href="rstudio-quick-referrence.html#cb72-3" aria-hidden="true" tabindex="-1"></a>soln2 <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">P=</span><span class="dv">2</span>)</span>
+<span id="cb72-4"><a href="rstudio-quick-referrence.html#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln1, <span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb72-5"><a href="rstudio-quick-referrence.html#cb72-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln2, <span class="at">color=</span><span class="st">&quot;magenta&quot;</span>, <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb72-6"><a href="rstudio-quick-referrence.html#cb72-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>, P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P, <span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
 <div id="sir-model" class="section level3 hasAnchor">
 <h3>SIR Model<a href="rstudio-quick-referrence.html#sir-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field, and a <code>traj_plot</code> function that we use to plot a trajectory. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="rstudio-quick-referrence.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="rstudio-quick-referrence.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is some example code that plots an SIR slope field where</p>
 <ul>
 <li>The infection rate is <span class="math inline">\(a=0.001\)</span></li>
@@ -1328,11 +1387,11 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <li><span class="math inline">\(0 \leq I \leq 100\)</span></li>
 </ul>
 <p>The horizontal axis is the susceptible population and the vertical axis is the infected population.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="rstudio-quick-referrence.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(S <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb71-2"><a href="rstudio-quick-referrence.html#cb71-2" aria-hidden="true" tabindex="-1"></a>                 I <span class="sc">~</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I, </span>
-<span id="cb71-3"><a href="rstudio-quick-referrence.html#cb71-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">bounds</span>(<span class="at">S=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), </span>
-<span id="cb71-4"><a href="rstudio-quick-referrence.html#cb71-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transform=</span><span class="cf">function</span>(L) L<span class="sc">^</span><span class="fl">0.01</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="rstudio-quick-referrence.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(S <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb74-2"><a href="rstudio-quick-referrence.html#cb74-2" aria-hidden="true" tabindex="-1"></a>                 I <span class="sc">~</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I, </span>
+<span id="cb74-3"><a href="rstudio-quick-referrence.html#cb74-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">bounds</span>(<span class="at">S=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), </span>
+<span id="cb74-4"><a href="rstudio-quick-referrence.html#cb74-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transform=</span><span class="cf">function</span>(L) L<span class="sc">^</span><span class="fl">0.01</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
 <p>Here is some example code that plots a single SIR trajectory for this same model. Here are the additional inputs:</p>
 <ul>
 <li><code>domain(t=0:80)</code> means that the trajectory runs for <span class="math inline">\(0 \leq t \leq 80\)</span>.</li>
@@ -1340,32 +1399,14 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <li><code>I=5</code> means that the initial infected population is 5.</li>
 <li><code>nt=20</code> means that 20 tick marks will be added to the trajectory, showing the time that the point <span class="math inline">\((S,I)\)</span> occurs.</li>
 </ul>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="rstudio-quick-referrence.html#cb72-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb72-2"><a href="rstudio-quick-referrence.html#cb72-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I )</span>
-<span id="cb72-3"><a href="rstudio-quick-referrence.html#cb72-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
-<span id="cb72-4"><a href="rstudio-quick-referrence.html#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="rstudio-quick-referrence.html#cb75-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb75-2"><a href="rstudio-quick-referrence.html#cb75-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I )</span>
+<span id="cb75-3"><a href="rstudio-quick-referrence.html#cb75-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
+<span id="cb75-4"><a href="rstudio-quick-referrence.html#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
-</div>
-</div>
-<div id="troubleshooting" class="section level2 hasAnchor">
-<h2>Troubleshooting<a href="rstudio-quick-referrence.html#troubleshooting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here’s a list of some common errors and what might be wrong:</p>
-<ul>
-<li><p><em>Nothing ran, all I got was a plus sign…</em> You probably forgot some parentheses. Try the following:</p>
-<ul>
-<li>Enter a parenthesis on that line to see if this closes it out.</li>
-<li>Press the Escape key to get to a new line.</li>
-</ul></li>
-<li><p><em>Unexpected symbol in…</em> You may have forgotten a multiplication sign or otherwise gave RStudio a symbol it cannot parse. Check your line of code again to see if you have all your symbols.</p></li>
-<li><p><em>Object not found…</em> You may not have defined that variable (or function) yet. Check your environment tab to see if it has the object you’re looking for (or if you’ve called it something different than you remember!). You also may be trying to use something from a data set that you have not included as a parameter. See if you need to add in the parameter <code>data=....</code></p></li>
-<li><p><em>Could not find function…</em> RStudio doesn’t know what function you’re using. Check your capitalization and that you have the right packages installed.</p></li>
-<li><p><em>… number of items to replace is not a multiple of replacement length …</em> Your input variable doesn’t match the name variable you used in the output when you called <code>makeFun</code>. Maybe you used <code>x</code> on one side of the tilde <code>~</code> and <code>t</code> on the other side?</p></li>
-<li><p><em>Argument “name” is missing, with no default…</em>
-You’re probably trying to take a derivative or antiderivative without the mosaicCalc package. Go back to the packages section of the introduction for how to fix this.</p></li>
-<li><p><em>I can’t find my data!</em> You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.</p></li>
-</ul>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
 
+</div>
 </div>
 </div>
             </section>

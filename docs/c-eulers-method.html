@@ -142,6 +142,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
 <ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages"><i class="fa fa-check"></i>Loading Mosaic and MosaicCalc Packages</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
@@ -168,9 +170,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
 <ul>
@@ -764,17 +768,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-27"><i class="fa fa-check"></i>Activities</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
@@ -828,7 +835,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="c-eulers-method" class="section level1 hasAnchor">
 <h1>7.C Euler’s Method<a href="c-eulers-method.html#c-eulers-method" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="c-eulers-method.html#cb183-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaic))</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="c-eulers-method.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaic))</span></code></pre></div>
 <div id="introduction-1" class="section level2 hasAnchor">
 <h2>Introduction<a href="c-eulers-method.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Euler’s Method finds an approximate solution to a differential equation. Here is how it works. You are given</p>
@@ -859,28 +866,28 @@ We repeat <span class="math inline">\(n\)</span> times. If we were given the end
 <li>End time <span class="math inline">\(T=9\)</span></li>
 <li>Step size <span class="math inline">\(\triangle t = 0.01\)</span></li>
 </ul>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="c-eulers-method.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
-<span id="cb184-2"><a href="c-eulers-method.html#cb184-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb184-3"><a href="c-eulers-method.html#cb184-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb184-4"><a href="c-eulers-method.html#cb184-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb184-5"><a href="c-eulers-method.html#cb184-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">9</span></span>
-<span id="cb184-6"><a href="c-eulers-method.html#cb184-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
-<span id="cb184-7"><a href="c-eulers-method.html#cb184-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
-<span id="cb184-8"><a href="c-eulers-method.html#cb184-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
-<span id="cb184-9"><a href="c-eulers-method.html#cb184-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
-<span id="cb184-10"><a href="c-eulers-method.html#cb184-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
-<span id="cb184-11"><a href="c-eulers-method.html#cb184-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
-<span id="cb184-12"><a href="c-eulers-method.html#cb184-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
-<span id="cb184-13"><a href="c-eulers-method.html#cb184-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
-<span id="cb184-14"><a href="c-eulers-method.html#cb184-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
-<span id="cb184-15"><a href="c-eulers-method.html#cb184-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
-<span id="cb184-16"><a href="c-eulers-method.html#cb184-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
-<span id="cb184-17"><a href="c-eulers-method.html#cb184-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
-<span id="cb184-18"><a href="c-eulers-method.html#cb184-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb184-19"><a href="c-eulers-method.html#cb184-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
-<span id="cb184-20"><a href="c-eulers-method.html#cb184-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span>
-<span id="cb184-21"><a href="c-eulers-method.html#cb184-21" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
-<span id="cb184-22"><a href="c-eulers-method.html#cb184-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="c-eulers-method.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
+<span id="cb187-2"><a href="c-eulers-method.html#cb187-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb187-3"><a href="c-eulers-method.html#cb187-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb187-4"><a href="c-eulers-method.html#cb187-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb187-5"><a href="c-eulers-method.html#cb187-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">9</span></span>
+<span id="cb187-6"><a href="c-eulers-method.html#cb187-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb187-7"><a href="c-eulers-method.html#cb187-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
+<span id="cb187-8"><a href="c-eulers-method.html#cb187-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
+<span id="cb187-9"><a href="c-eulers-method.html#cb187-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
+<span id="cb187-10"><a href="c-eulers-method.html#cb187-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
+<span id="cb187-11"><a href="c-eulers-method.html#cb187-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
+<span id="cb187-12"><a href="c-eulers-method.html#cb187-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
+<span id="cb187-13"><a href="c-eulers-method.html#cb187-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
+<span id="cb187-14"><a href="c-eulers-method.html#cb187-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
+<span id="cb187-15"><a href="c-eulers-method.html#cb187-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
+<span id="cb187-16"><a href="c-eulers-method.html#cb187-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
+<span id="cb187-17"><a href="c-eulers-method.html#cb187-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
+<span id="cb187-18"><a href="c-eulers-method.html#cb187-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb187-19"><a href="c-eulers-method.html#cb187-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
+<span id="cb187-20"><a href="c-eulers-method.html#cb187-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span>
+<span id="cb187-21"><a href="c-eulers-method.html#cb187-21" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
+<span id="cb187-22"><a href="c-eulers-method.html#cb187-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
 </div>
 </div>
 <div id="activities-26" class="section level2 hasAnchor">
@@ -999,29 +1006,29 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 \]</span></li>
 <li>We run the Euler’s Method code with <span class="math inline">\(Q(0)=0\)</span> and <code>dt=0.1</code> for 1000 steps</li>
 </ol>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="c-eulers-method.html#cb185-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
-<span id="cb185-2"><a href="c-eulers-method.html#cb185-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">0.1</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">85</span> <span class="sc">~</span> x)</span>
-<span id="cb185-3"><a href="c-eulers-method.html#cb185-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb185-4"><a href="c-eulers-method.html#cb185-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb185-5"><a href="c-eulers-method.html#cb185-5" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.1</span></span>
-<span id="cb185-6"><a href="c-eulers-method.html#cb185-6" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
-<span id="cb185-7"><a href="c-eulers-method.html#cb185-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
-<span id="cb185-8"><a href="c-eulers-method.html#cb185-8" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
-<span id="cb185-9"><a href="c-eulers-method.html#cb185-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
-<span id="cb185-10"><a href="c-eulers-method.html#cb185-10" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
-<span id="cb185-11"><a href="c-eulers-method.html#cb185-11" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
-<span id="cb185-12"><a href="c-eulers-method.html#cb185-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
-<span id="cb185-13"><a href="c-eulers-method.html#cb185-13" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
-<span id="cb185-14"><a href="c-eulers-method.html#cb185-14" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
-<span id="cb185-15"><a href="c-eulers-method.html#cb185-15" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
-<span id="cb185-16"><a href="c-eulers-method.html#cb185-16" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
-<span id="cb185-17"><a href="c-eulers-method.html#cb185-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb185-18"><a href="c-eulers-method.html#cb185-18" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
-<span id="cb185-19"><a href="c-eulers-method.html#cb185-19" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="c-eulers-method.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
+<span id="cb188-2"><a href="c-eulers-method.html#cb188-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span><span class="fl">0.1</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">85</span> <span class="sc">~</span> x)</span>
+<span id="cb188-3"><a href="c-eulers-method.html#cb188-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb188-4"><a href="c-eulers-method.html#cb188-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb188-5"><a href="c-eulers-method.html#cb188-5" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb188-6"><a href="c-eulers-method.html#cb188-6" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb188-7"><a href="c-eulers-method.html#cb188-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
+<span id="cb188-8"><a href="c-eulers-method.html#cb188-8" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
+<span id="cb188-9"><a href="c-eulers-method.html#cb188-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
+<span id="cb188-10"><a href="c-eulers-method.html#cb188-10" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
+<span id="cb188-11"><a href="c-eulers-method.html#cb188-11" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
+<span id="cb188-12"><a href="c-eulers-method.html#cb188-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
+<span id="cb188-13"><a href="c-eulers-method.html#cb188-13" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
+<span id="cb188-14"><a href="c-eulers-method.html#cb188-14" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
+<span id="cb188-15"><a href="c-eulers-method.html#cb188-15" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
+<span id="cb188-16"><a href="c-eulers-method.html#cb188-16" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
+<span id="cb188-17"><a href="c-eulers-method.html#cb188-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb188-18"><a href="c-eulers-method.html#cb188-18" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
+<span id="cb188-19"><a href="c-eulers-method.html#cb188-19" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
 <pre><code>## [1] 100.0000 849.9633</code></pre>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="c-eulers-method.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
-<span id="cb187-2"><a href="c-eulers-method.html#cb187-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-161-1.png" width="70%" /></p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="c-eulers-method.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
+<span id="cb190-2"><a href="c-eulers-method.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-163-1.png" width="70%" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>The amount of the drug converges to 850.</li>
 </ol>
@@ -1038,39 +1045,12 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <li><span class="math inline">\(\triangle t = 10\)</span></li>
 </ol></li>
 </ol>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="c-eulers-method.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
-<span id="cb188-2"><a href="c-eulers-method.html#cb188-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">0.04</span><span class="sc">*</span>x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">/</span><span class="dv">800</span>) <span class="sc">~</span> x)</span>
-<span id="cb188-3"><a href="c-eulers-method.html#cb188-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb188-4"><a href="c-eulers-method.html#cb188-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb188-5"><a href="c-eulers-method.html#cb188-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb188-6"><a href="c-eulers-method.html#cb188-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="dv">10</span></span>
-<span id="cb188-7"><a href="c-eulers-method.html#cb188-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
-<span id="cb188-8"><a href="c-eulers-method.html#cb188-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
-<span id="cb188-9"><a href="c-eulers-method.html#cb188-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
-<span id="cb188-10"><a href="c-eulers-method.html#cb188-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
-<span id="cb188-11"><a href="c-eulers-method.html#cb188-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
-<span id="cb188-12"><a href="c-eulers-method.html#cb188-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
-<span id="cb188-13"><a href="c-eulers-method.html#cb188-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
-<span id="cb188-14"><a href="c-eulers-method.html#cb188-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
-<span id="cb188-15"><a href="c-eulers-method.html#cb188-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
-<span id="cb188-16"><a href="c-eulers-method.html#cb188-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
-<span id="cb188-17"><a href="c-eulers-method.html#cb188-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
-<span id="cb188-18"><a href="c-eulers-method.html#cb188-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb188-19"><a href="c-eulers-method.html#cb188-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
-<span id="cb188-20"><a href="c-eulers-method.html#cb188-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1]  50.000 377.373</code></pre>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="c-eulers-method.html#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
-<span id="cb190-2"><a href="c-eulers-method.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-162-1.png" width="70%" /></p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\triangle t = 1\)</span></li>
-</ol>
 <div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="c-eulers-method.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
 <span id="cb191-2"><a href="c-eulers-method.html#cb191-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">0.04</span><span class="sc">*</span>x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">/</span><span class="dv">800</span>) <span class="sc">~</span> x)</span>
 <span id="cb191-3"><a href="c-eulers-method.html#cb191-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb191-4"><a href="c-eulers-method.html#cb191-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">100</span></span>
 <span id="cb191-5"><a href="c-eulers-method.html#cb191-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb191-6"><a href="c-eulers-method.html#cb191-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb191-6"><a href="c-eulers-method.html#cb191-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="dv">10</span></span>
 <span id="cb191-7"><a href="c-eulers-method.html#cb191-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
 <span id="cb191-8"><a href="c-eulers-method.html#cb191-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
 <span id="cb191-9"><a href="c-eulers-method.html#cb191-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
@@ -1085,19 +1065,19 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <span id="cb191-18"><a href="c-eulers-method.html#cb191-18" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb191-19"><a href="c-eulers-method.html#cb191-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
 <span id="cb191-20"><a href="c-eulers-method.html#cb191-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1]  50.0000 407.5033</code></pre>
+<pre><code>## [1]  50.000 377.373</code></pre>
 <div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="c-eulers-method.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb193-2"><a href="c-eulers-method.html#cb193-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-163-1.png" width="70%" /></p>
-<ol start="3" style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\triangle t = 0.1\)</span></li>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-164-1.png" width="70%" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\triangle t = 1\)</span></li>
 </ol>
 <div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="c-eulers-method.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
 <span id="cb194-2"><a href="c-eulers-method.html#cb194-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">0.04</span><span class="sc">*</span>x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">/</span><span class="dv">800</span>) <span class="sc">~</span> x)</span>
 <span id="cb194-3"><a href="c-eulers-method.html#cb194-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb194-4"><a href="c-eulers-method.html#cb194-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">100</span></span>
 <span id="cb194-5"><a href="c-eulers-method.html#cb194-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb194-6"><a href="c-eulers-method.html#cb194-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb194-6"><a href="c-eulers-method.html#cb194-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="dv">1</span></span>
 <span id="cb194-7"><a href="c-eulers-method.html#cb194-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
 <span id="cb194-8"><a href="c-eulers-method.html#cb194-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
 <span id="cb194-9"><a href="c-eulers-method.html#cb194-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
@@ -1112,19 +1092,19 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <span id="cb194-18"><a href="c-eulers-method.html#cb194-18" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb194-19"><a href="c-eulers-method.html#cb194-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
 <span id="cb194-20"><a href="c-eulers-method.html#cb194-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1]  50.0000 410.4851</code></pre>
+<pre><code>## [1]  50.0000 407.5033</code></pre>
 <div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="c-eulers-method.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb196-2"><a href="c-eulers-method.html#cb196-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-164-1.png" width="70%" /></p>
-<ol start="4" style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\triangle t = 0.01\)</span></li>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-165-1.png" width="70%" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\triangle t = 0.1\)</span></li>
 </ol>
 <div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="c-eulers-method.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
 <span id="cb197-2"><a href="c-eulers-method.html#cb197-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">0.04</span><span class="sc">*</span>x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">/</span><span class="dv">800</span>) <span class="sc">~</span> x)</span>
 <span id="cb197-3"><a href="c-eulers-method.html#cb197-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb197-4"><a href="c-eulers-method.html#cb197-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">100</span></span>
 <span id="cb197-5"><a href="c-eulers-method.html#cb197-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb197-6"><a href="c-eulers-method.html#cb197-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb197-6"><a href="c-eulers-method.html#cb197-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.1</span></span>
 <span id="cb197-7"><a href="c-eulers-method.html#cb197-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
 <span id="cb197-8"><a href="c-eulers-method.html#cb197-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
 <span id="cb197-9"><a href="c-eulers-method.html#cb197-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
@@ -1139,10 +1119,37 @@ n &amp; t_n &amp; x_n &amp; x&#39;(t_n) &amp; x_{n} + x&#39;(t_{n}) (t_{n+1} - t
 <span id="cb197-18"><a href="c-eulers-method.html#cb197-18" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb197-19"><a href="c-eulers-method.html#cb197-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
 <span id="cb197-20"><a href="c-eulers-method.html#cb197-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1]  50.0000 410.7823</code></pre>
+<pre><code>## [1]  50.0000 410.4851</code></pre>
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="c-eulers-method.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
 <span id="cb199-2"><a href="c-eulers-method.html#cb199-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-165-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="70%" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\triangle t = 0.01\)</span></li>
+</ol>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="c-eulers-method.html#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># derivative, initial conditions and setup</span></span>
+<span id="cb200-2"><a href="c-eulers-method.html#cb200-2" aria-hidden="true" tabindex="-1"></a>dxdt <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fl">0.04</span><span class="sc">*</span>x<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">/</span><span class="dv">800</span>) <span class="sc">~</span> x)</span>
+<span id="cb200-3"><a href="c-eulers-method.html#cb200-3" aria-hidden="true" tabindex="-1"></a>tstart <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb200-4"><a href="c-eulers-method.html#cb200-4" aria-hidden="true" tabindex="-1"></a>xstart <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb200-5"><a href="c-eulers-method.html#cb200-5" aria-hidden="true" tabindex="-1"></a>tend <span class="ot">=</span> <span class="dv">50</span></span>
+<span id="cb200-6"><a href="c-eulers-method.html#cb200-6" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb200-7"><a href="c-eulers-method.html#cb200-7" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> (tend <span class="sc">-</span> tstart)<span class="sc">/</span>dt</span>
+<span id="cb200-8"><a href="c-eulers-method.html#cb200-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Euler&#39;s Method code</span></span>
+<span id="cb200-9"><a href="c-eulers-method.html#cb200-9" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> tstart</span>
+<span id="cb200-10"><a href="c-eulers-method.html#cb200-10" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> xstart</span>
+<span id="cb200-11"><a href="c-eulers-method.html#cb200-11" aria-hidden="true" tabindex="-1"></a>tlist <span class="ot">=</span> t</span>
+<span id="cb200-12"><a href="c-eulers-method.html#cb200-12" aria-hidden="true" tabindex="-1"></a>xlist <span class="ot">=</span> x</span>
+<span id="cb200-13"><a href="c-eulers-method.html#cb200-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>num) {</span>
+<span id="cb200-14"><a href="c-eulers-method.html#cb200-14" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">=</span> x <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dxdt</span>(x)</span>
+<span id="cb200-15"><a href="c-eulers-method.html#cb200-15" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">=</span> t <span class="sc">+</span> dt</span>
+<span id="cb200-16"><a href="c-eulers-method.html#cb200-16" aria-hidden="true" tabindex="-1"></a>  tlist <span class="ot">=</span> <span class="fu">c</span>(tlist, t)</span>
+<span id="cb200-17"><a href="c-eulers-method.html#cb200-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
+<span id="cb200-18"><a href="c-eulers-method.html#cb200-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb200-19"><a href="c-eulers-method.html#cb200-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
+<span id="cb200-20"><a href="c-eulers-method.html#cb200-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [1]  50.0000 410.7823</code></pre>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="c-eulers-method.html#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
+<span id="cb202-2"><a href="c-eulers-method.html#cb202-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist, <span class="at">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Q(t)&quot;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="70%" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>We have
 <span class="math display">\[

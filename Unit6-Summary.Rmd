@@ -31,7 +31,7 @@ I can ...
 * Find the antiderivative(s) of our familiar functions.
 * Explain why we need "$+ C$" when finding antiderivatives.
 * Use the rules of integration to write a complicated indefinite integral as the sum of multiple indefinite integrals.
-* Use substitution to evaluate and integral of the form $\int f(kx) \, dx$ wherre $k$ is a constant.
+* Use substitution to evaluate and integral of the form $\int f(kx) \, dx$ where $k$ is a constant.
 * Calculate the average value of $f(x)$ on interval $[a,b]$ using the formula
 $$
 \mbox{average value} = \frac{1}{b-a} \int_a^b f(x) \, dx.

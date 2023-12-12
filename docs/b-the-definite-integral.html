@@ -142,6 +142,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
 <ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages"><i class="fa fa-check"></i>Loading Mosaic and MosaicCalc Packages</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
@@ -168,9 +170,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
 <ul>
@@ -764,17 +768,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-27"><i class="fa fa-check"></i>Activities</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
@@ -831,16 +838,16 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="introduction" class="section level2 hasAnchor">
 <h2>Introduction<a href="b-the-definite-integral.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here is some code that approximates the area under <span class="math inline">\(f(x)=x^2\)</span> on the interval <span class="math inline">\([a,b]\)</span> using <strong>right hand endpoints</strong> on 100 subintervals. (How would you change this code to use <strong>left hand endpoints</strong> instead?)</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="b-the-definite-integral.html#cb162-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb162-2"><a href="b-the-definite-integral.html#cb162-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb162-3"><a href="b-the-definite-integral.html#cb162-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb162-4"><a href="b-the-definite-integral.html#cb162-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb162-5"><a href="b-the-definite-integral.html#cb162-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb162-6"><a href="b-the-definite-integral.html#cb162-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb162-7"><a href="b-the-definite-integral.html#cb162-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb162-8"><a href="b-the-definite-integral.html#cb162-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb162-9"><a href="b-the-definite-integral.html#cb162-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb162-10"><a href="b-the-definite-integral.html#cb162-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="b-the-definite-integral.html#cb165-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb165-2"><a href="b-the-definite-integral.html#cb165-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb165-3"><a href="b-the-definite-integral.html#cb165-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb165-4"><a href="b-the-definite-integral.html#cb165-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb165-5"><a href="b-the-definite-integral.html#cb165-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb165-6"><a href="b-the-definite-integral.html#cb165-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb165-7"><a href="b-the-definite-integral.html#cb165-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb165-8"><a href="b-the-definite-integral.html#cb165-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb165-9"><a href="b-the-definite-integral.html#cb165-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb165-10"><a href="b-the-definite-integral.html#cb165-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 9.13545</code></pre>
 </div>
 <div id="activities-22" class="section level2 hasAnchor">
@@ -848,7 +855,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="drive-my-car" class="section level3 hasAnchor">
 <h3>Drive My Car<a href="b-the-definite-integral.html#drive-my-car" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A car is driving at a rate of <span class="math inline">\(v(t)=-t+5\)</span>. Here is a plot of the velocity.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
 <ol style="list-style-type: decimal">
 <li>Use RStudio to approximate these definite integrals using 1000 subintervals.</li>
 </ol>
@@ -865,7 +872,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="accelerate-my-car" class="section level3 hasAnchor">
 <h3>Accelerate My Car<a href="b-the-definite-integral.html#accelerate-my-car" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A car is traveling at 55 feet per second at time <span class="math inline">\(t=0\)</span>. The plot below shows the car’s <strong>acceleration</strong> on the interval <span class="math inline">\([0,18]\)</span>.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-148-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-150-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
 <li>Is the velocity increasing or decreasing at <span class="math inline">\(t=2\)</span>? <span class="math inline">\(t=15\)</span>?</li>
 <li>What happens when <span class="math inline">\(t=6\)</span>?</li>
@@ -887,9 +894,9 @@ where <span class="math inline">\(q\)</span> is in dozens of cupcakes.</p>
 <div id="area-between-curves" class="section level3 hasAnchor">
 <h3>Area Between Curves<a href="b-the-definite-integral.html#area-between-curves" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Below is a graph of both <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span> on the interval <span class="math inline">\([0,2\pi]\)</span>.</p>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="b-the-definite-integral.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x)<span class="sc">~</span>x,<span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi),<span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.1</span>,<span class="fl">1.1</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb164-2"><a href="b-the-definite-integral.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(x)<span class="sc">~</span>x,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-149-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="b-the-definite-integral.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x)<span class="sc">~</span>x,<span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi),<span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.1</span>,<span class="fl">1.1</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb167-2"><a href="b-the-definite-integral.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(x)<span class="sc">~</span>x,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-151-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
 <li>Write a <strong>sum of integrals</strong> which represents the enclosed by the two curves.<br />
 Hint: <span class="math inline">\(\sin(x) = \cos(x)\)</span> at <span class="math inline">\(x=\pi/4\)</span> and <span class="math inline">\(x=5\pi/4\)</span>.</li>
@@ -907,44 +914,44 @@ Hint: <span class="math inline">\(\sin(x) = \cos(x)\)</span> at <span class="mat
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle{\int_0^5 v(x)dx}\)</span></li>
 </ol>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="b-the-definite-integral.html#cb165-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
-<span id="cb165-2"><a href="b-the-definite-integral.html#cb165-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb165-3"><a href="b-the-definite-integral.html#cb165-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb165-4"><a href="b-the-definite-integral.html#cb165-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
-<span id="cb165-5"><a href="b-the-definite-integral.html#cb165-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb165-6"><a href="b-the-definite-integral.html#cb165-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb165-7"><a href="b-the-definite-integral.html#cb165-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb165-8"><a href="b-the-definite-integral.html#cb165-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb165-9"><a href="b-the-definite-integral.html#cb165-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb165-10"><a href="b-the-definite-integral.html#cb165-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="b-the-definite-integral.html#cb168-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
+<span id="cb168-2"><a href="b-the-definite-integral.html#cb168-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb168-3"><a href="b-the-definite-integral.html#cb168-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb168-4"><a href="b-the-definite-integral.html#cb168-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb168-5"><a href="b-the-definite-integral.html#cb168-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb168-6"><a href="b-the-definite-integral.html#cb168-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb168-7"><a href="b-the-definite-integral.html#cb168-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb168-8"><a href="b-the-definite-integral.html#cb168-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb168-9"><a href="b-the-definite-integral.html#cb168-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb168-10"><a href="b-the-definite-integral.html#cb168-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 12.4875</code></pre>
 <ol start="2" style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle{\int_0^8 v(x)dx}\)</span></li>
 </ol>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="b-the-definite-integral.html#cb167-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
-<span id="cb167-2"><a href="b-the-definite-integral.html#cb167-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb167-3"><a href="b-the-definite-integral.html#cb167-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">8</span></span>
-<span id="cb167-4"><a href="b-the-definite-integral.html#cb167-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
-<span id="cb167-5"><a href="b-the-definite-integral.html#cb167-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb167-6"><a href="b-the-definite-integral.html#cb167-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb167-7"><a href="b-the-definite-integral.html#cb167-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb167-8"><a href="b-the-definite-integral.html#cb167-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb167-9"><a href="b-the-definite-integral.html#cb167-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb167-10"><a href="b-the-definite-integral.html#cb167-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="b-the-definite-integral.html#cb170-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
+<span id="cb170-2"><a href="b-the-definite-integral.html#cb170-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb170-3"><a href="b-the-definite-integral.html#cb170-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">8</span></span>
+<span id="cb170-4"><a href="b-the-definite-integral.html#cb170-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb170-5"><a href="b-the-definite-integral.html#cb170-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb170-6"><a href="b-the-definite-integral.html#cb170-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb170-7"><a href="b-the-definite-integral.html#cb170-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb170-8"><a href="b-the-definite-integral.html#cb170-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb170-9"><a href="b-the-definite-integral.html#cb170-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb170-10"><a href="b-the-definite-integral.html#cb170-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 7.968</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle{\int_0^{12} v(x)dx}\)</span></li>
 </ol>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="b-the-definite-integral.html#cb169-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
-<span id="cb169-2"><a href="b-the-definite-integral.html#cb169-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb169-3"><a href="b-the-definite-integral.html#cb169-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">12</span></span>
-<span id="cb169-4"><a href="b-the-definite-integral.html#cb169-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
-<span id="cb169-5"><a href="b-the-definite-integral.html#cb169-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb169-6"><a href="b-the-definite-integral.html#cb169-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb169-7"><a href="b-the-definite-integral.html#cb169-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb169-8"><a href="b-the-definite-integral.html#cb169-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb169-9"><a href="b-the-definite-integral.html#cb169-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb169-10"><a href="b-the-definite-integral.html#cb169-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="b-the-definite-integral.html#cb172-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="sc">-</span>t<span class="sc">+</span><span class="dv">5</span> <span class="sc">~</span> t)</span>
+<span id="cb172-2"><a href="b-the-definite-integral.html#cb172-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb172-3"><a href="b-the-definite-integral.html#cb172-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">12</span></span>
+<span id="cb172-4"><a href="b-the-definite-integral.html#cb172-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb172-5"><a href="b-the-definite-integral.html#cb172-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb172-6"><a href="b-the-definite-integral.html#cb172-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb172-7"><a href="b-the-definite-integral.html#cb172-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb172-8"><a href="b-the-definite-integral.html#cb172-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb172-9"><a href="b-the-definite-integral.html#cb172-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb172-10"><a href="b-the-definite-integral.html#cb172-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] -12.072</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>The car turns around at <span class="math inline">\(t=5\)</span>. We have <span class="math inline">\(v(t) &gt; 0\)</span> for <span class="math inline">\(t &lt; 5\)</span> and <span class="math inline">\(v(t) &lt; 0\)</span> for <span class="math inline">\(t &gt; 5\)</span>.</p></li>
@@ -974,16 +981,16 @@ where <span class="math inline">\(q\)</span> is in dozens of cupcakes.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Here is our <em>RStudio</em> estimate.</li>
 </ol>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="b-the-definite-integral.html#cb171-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">100</span> <span class="sc">*</span> q<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>q <span class="sc">+</span> <span class="dv">1</span> <span class="sc">~</span> q)</span>
-<span id="cb171-2"><a href="b-the-definite-integral.html#cb171-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb171-3"><a href="b-the-definite-integral.html#cb171-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">30</span></span>
-<span id="cb171-4"><a href="b-the-definite-integral.html#cb171-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb171-5"><a href="b-the-definite-integral.html#cb171-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb171-6"><a href="b-the-definite-integral.html#cb171-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb171-7"><a href="b-the-definite-integral.html#cb171-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb171-8"><a href="b-the-definite-integral.html#cb171-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb171-9"><a href="b-the-definite-integral.html#cb171-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb171-10"><a href="b-the-definite-integral.html#cb171-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="b-the-definite-integral.html#cb174-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">100</span> <span class="sc">*</span> q<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span><span class="sc">*</span>q <span class="sc">+</span> <span class="dv">1</span> <span class="sc">~</span> q)</span>
+<span id="cb174-2"><a href="b-the-definite-integral.html#cb174-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb174-3"><a href="b-the-definite-integral.html#cb174-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">30</span></span>
+<span id="cb174-4"><a href="b-the-definite-integral.html#cb174-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb174-5"><a href="b-the-definite-integral.html#cb174-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb174-6"><a href="b-the-definite-integral.html#cb174-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb174-7"><a href="b-the-definite-integral.html#cb174-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb174-8"><a href="b-the-definite-integral.html#cb174-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb174-9"><a href="b-the-definite-integral.html#cb174-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb174-10"><a href="b-the-definite-integral.html#cb174-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 210.0023</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>The total costs are approximate <span class="math inline">\(1500+210\)</span>, which is the sum of our fixed costs and our production costs.</li>
@@ -996,41 +1003,41 @@ where <span class="math inline">\(q\)</span> is in dozens of cupcakes.</p>
 <span class="math display">\[\int_{\pi/4}^{5\pi/4} ( \cos(x) - \sin(x)) dx  + \int_{\pi/4}^{5\pi/4} ( \sin(x) - \cos(x)) dx + \int_{5\pi/4}^{2\pi} ( \cos(x) - \sin(x)) dx.\]</span></p></li>
 <li><p>Our <em>RStudio</em> estimates for each part are</p></li>
 </ol>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="b-the-definite-integral.html#cb173-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">cos</span>(x) <span class="sc">-</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x)</span>
-<span id="cb173-2"><a href="b-the-definite-integral.html#cb173-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb173-3"><a href="b-the-definite-integral.html#cb173-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> pi <span class="sc">/</span><span class="dv">4</span></span>
-<span id="cb173-4"><a href="b-the-definite-integral.html#cb173-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb173-5"><a href="b-the-definite-integral.html#cb173-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb173-6"><a href="b-the-definite-integral.html#cb173-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb173-7"><a href="b-the-definite-integral.html#cb173-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb173-8"><a href="b-the-definite-integral.html#cb173-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb173-9"><a href="b-the-definite-integral.html#cb173-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb173-10"><a href="b-the-definite-integral.html#cb173-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="b-the-definite-integral.html#cb176-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">cos</span>(x) <span class="sc">-</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x)</span>
+<span id="cb176-2"><a href="b-the-definite-integral.html#cb176-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb176-3"><a href="b-the-definite-integral.html#cb176-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> pi <span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb176-4"><a href="b-the-definite-integral.html#cb176-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb176-5"><a href="b-the-definite-integral.html#cb176-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb176-6"><a href="b-the-definite-integral.html#cb176-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb176-7"><a href="b-the-definite-integral.html#cb176-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb176-8"><a href="b-the-definite-integral.html#cb176-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb176-9"><a href="b-the-definite-integral.html#cb176-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb176-10"><a href="b-the-definite-integral.html#cb176-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 0.4142096</code></pre>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="b-the-definite-integral.html#cb175-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">sin</span>(x) <span class="sc">-</span> <span class="fu">cos</span>(x) <span class="sc">~</span> x)</span>
-<span id="cb175-2"><a href="b-the-definite-integral.html#cb175-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> pi<span class="sc">/</span><span class="dv">4</span></span>
-<span id="cb175-3"><a href="b-the-definite-integral.html#cb175-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">5</span><span class="sc">*</span> pi <span class="sc">/</span><span class="dv">4</span></span>
-<span id="cb175-4"><a href="b-the-definite-integral.html#cb175-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb175-5"><a href="b-the-definite-integral.html#cb175-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb175-6"><a href="b-the-definite-integral.html#cb175-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb175-7"><a href="b-the-definite-integral.html#cb175-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb175-8"><a href="b-the-definite-integral.html#cb175-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb175-9"><a href="b-the-definite-integral.html#cb175-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb175-10"><a href="b-the-definite-integral.html#cb175-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="b-the-definite-integral.html#cb178-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">sin</span>(x) <span class="sc">-</span> <span class="fu">cos</span>(x) <span class="sc">~</span> x)</span>
+<span id="cb178-2"><a href="b-the-definite-integral.html#cb178-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> pi<span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb178-3"><a href="b-the-definite-integral.html#cb178-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">5</span><span class="sc">*</span> pi <span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb178-4"><a href="b-the-definite-integral.html#cb178-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb178-5"><a href="b-the-definite-integral.html#cb178-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb178-6"><a href="b-the-definite-integral.html#cb178-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb178-7"><a href="b-the-definite-integral.html#cb178-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb178-8"><a href="b-the-definite-integral.html#cb178-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb178-9"><a href="b-the-definite-integral.html#cb178-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb178-10"><a href="b-the-definite-integral.html#cb178-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 2.828427</code></pre>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="b-the-definite-integral.html#cb177-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">cos</span>(x) <span class="sc">-</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x)</span>
-<span id="cb177-2"><a href="b-the-definite-integral.html#cb177-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">5</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">4</span></span>
-<span id="cb177-3"><a href="b-the-definite-integral.html#cb177-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span><span class="sc">*</span>pi </span>
-<span id="cb177-4"><a href="b-the-definite-integral.html#cb177-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb177-5"><a href="b-the-definite-integral.html#cb177-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb177-6"><a href="b-the-definite-integral.html#cb177-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb177-7"><a href="b-the-definite-integral.html#cb177-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb177-8"><a href="b-the-definite-integral.html#cb177-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb177-9"><a href="b-the-definite-integral.html#cb177-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb177-10"><a href="b-the-definite-integral.html#cb177-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="b-the-definite-integral.html#cb180-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">cos</span>(x) <span class="sc">-</span> <span class="fu">sin</span>(x) <span class="sc">~</span> x)</span>
+<span id="cb180-2"><a href="b-the-definite-integral.html#cb180-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">5</span><span class="sc">*</span>pi<span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb180-3"><a href="b-the-definite-integral.html#cb180-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span><span class="sc">*</span>pi </span>
+<span id="cb180-4"><a href="b-the-definite-integral.html#cb180-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb180-5"><a href="b-the-definite-integral.html#cb180-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb180-6"><a href="b-the-definite-integral.html#cb180-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb180-7"><a href="b-the-definite-integral.html#cb180-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb180-8"><a href="b-the-definite-integral.html#cb180-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb180-9"><a href="b-the-definite-integral.html#cb180-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb180-10"><a href="b-the-definite-integral.html#cb180-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 2.414225</code></pre>
 <p>So our estimate of the area is</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="b-the-definite-integral.html#cb179-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.414</span> <span class="sc">+</span> <span class="fl">2.828</span> <span class="sc">+</span> <span class="fl">2.414</span></span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="b-the-definite-integral.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.414</span> <span class="sc">+</span> <span class="fl">2.828</span> <span class="sc">+</span> <span class="fl">2.414</span></span></code></pre></div>
 <pre><code>## [1] 5.656</code></pre>
 
 </div>

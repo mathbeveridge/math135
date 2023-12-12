@@ -142,6 +142,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
 <ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages"><i class="fa fa-check"></i>Loading Mosaic and MosaicCalc Packages</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
@@ -168,9 +170,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
 <ul>
@@ -764,17 +768,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-27"><i class="fa fa-check"></i>Activities</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
@@ -957,16 +964,16 @@ where <span class="math inline">\(t\)</span> is the number of days since the sta
 \]</span></li>
 <li>Let’s use RStudio. It’s easier!</li>
 </ol>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="c-the-indefinite-integral.html#cb181-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">8</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb181-2"><a href="c-the-indefinite-integral.html#cb181-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="sc">-</span><span class="dv">2</span> </span>
-<span id="cb181-3"><a href="c-the-indefinite-integral.html#cb181-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span> </span>
-<span id="cb181-4"><a href="c-the-indefinite-integral.html#cb181-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb181-5"><a href="c-the-indefinite-integral.html#cb181-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb181-6"><a href="c-the-indefinite-integral.html#cb181-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb181-7"><a href="c-the-indefinite-integral.html#cb181-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb181-8"><a href="c-the-indefinite-integral.html#cb181-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb181-9"><a href="c-the-indefinite-integral.html#cb181-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb181-10"><a href="c-the-indefinite-integral.html#cb181-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="c-the-indefinite-integral.html#cb184-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">8</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb184-2"><a href="c-the-indefinite-integral.html#cb184-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="sc">-</span><span class="dv">2</span> </span>
+<span id="cb184-3"><a href="c-the-indefinite-integral.html#cb184-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span> </span>
+<span id="cb184-4"><a href="c-the-indefinite-integral.html#cb184-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb184-5"><a href="c-the-indefinite-integral.html#cb184-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb184-6"><a href="c-the-indefinite-integral.html#cb184-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb184-7"><a href="c-the-indefinite-integral.html#cb184-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb184-8"><a href="c-the-indefinite-integral.html#cb184-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb184-9"><a href="c-the-indefinite-integral.html#cb184-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb184-10"><a href="c-the-indefinite-integral.html#cb184-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 21.33333</code></pre>
 </div>
 <div id="average-value-1" class="section level3 hasAnchor">

@@ -1,9 +1,37 @@
 # RStudio Quick Referrence
 
-```{r, include=FALSE, warning=FALSE}
+## Loading Mosaic and MosaicCalc Packages
+
+Run the following code block to load the `mosaic` and `mosaicCalc` libraries
+
+```{r, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
+suppressPackageStartupMessages(library(mosaicCalc))
 ```
+
+
+## Troubleshooting
+Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:
+
+- _Nothing ran, all I got was a plus sign..._ You probably forgot some parentheses. Try the following:
+   - Enter a parenthesis on that line to see if this closes it out.
+   - Press the Escape key to get to a new line. 
+
+
+* _Unexpected symbol in..._ You may have forgotten a multiplication sign or otherwise gave RStudio a symbol it cannot parse. Check your line of code again to see if you have all your symbols.
+
+* _Object not found..._ You may not have defined that variable (or function) yet. Check your environment tab to see if it has the object you're looking for (or if you've called it something different than you remember!). You also may be trying to use something from a data set that you have not included as a parameter. See if you need to add in the parameter `data=....`
+
+* _Could not find function..._ RStudio doesn't know what function you're using. Check your capitalization and that you have the right packages installed.
+
+* _... number of items to replace is not a multiple of replacement length ..._ Your input variable doesn't match the name variable you used in the output when you called `makeFun`. Maybe you used `x` on one side of the tilde `~` and `t` on the other side? 
+
+* _Argument "name" is missing, with no default..._
+You're probably trying to use `makeFun` without loading the `mosaic` package, or to take a derivative or antiderivative without the `mosaicCalc package`. See the  "Loading Mosaic and MosaicCalc Packages" section at the top of this page for how to fix this.
+
+* _I can't find my data!_  You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.
+
 
 ## Functions and Data    
 
@@ -515,6 +543,29 @@ P ~ 6 - 2 * P,
 bounds(t=-8:8, P=-8:8))
 ```
 
+## Creating a Trajectory in RStudio
+
+The `mosaicCalc` package also has a `traj_plot` function that plots a solution curve to a differential equation through a given initial point.
+
+Here is the code to plot the trajectory starting at $P(0)=6$ for the differential equation $\displaystyle{\frac{dP}{dt} = 6 - 2 P}$. In the code below, the `nt` parameter indicated the number of "tick marks" to use along the trajectory.
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  6 - 2 * P )
+soln = integrateODE(dyn, domain(t=0:5), P=6)
+traj_plot(P(t) ~ t, soln,  nt=5) 
+```
+
+In fact, we can get fancier by making a single plot that has two trajectories (one for $P(0)=6$ and one for $P(0)=2$) along with the vector field.
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  6 - 2 * P )
+soln1 = integrateODE(dyn, domain(t=0:5), P=6)
+soln2 = integrateODE(dyn, domain(t=0:5), P=2)
+traj_plot(P(t) ~ t, soln1, color="blue", nt=0) %>%
+  traj_plot(P(t) ~ t, soln2, color="magenta", nt=0) %>%
+  vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, bounds(t=0:5, P=0:8))
+```
+
 ### SIR Model
 
 The `mosaicCalc` package has a `vectorfield_plot` function that we use to create a slope field, and a `traj_plot` function that we use to plot a trajectory. So we need to make sure that this package has been loaded into RStudio.
@@ -563,25 +614,4 @@ Soln = integrateODE(SIRdyn, domain(t=0:80), S=800, I=5)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-
-## Troubleshooting
-Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:
-
-- _Nothing ran, all I got was a plus sign..._ You probably forgot some parentheses. Try the following:
-   - Enter a parenthesis on that line to see if this closes it out.
-   - Press the Escape key to get to a new line. 
-
-
-* _Unexpected symbol in..._ You may have forgotten a multiplication sign or otherwise gave RStudio a symbol it cannot parse. Check your line of code again to see if you have all your symbols.
-
-* _Object not found..._ You may not have defined that variable (or function) yet. Check your environment tab to see if it has the object you're looking for (or if you've called it something different than you remember!). You also may be trying to use something from a data set that you have not included as a parameter. See if you need to add in the parameter `data=....`
-
-* _Could not find function..._ RStudio doesn't know what function you're using. Check your capitalization and that you have the right packages installed.
-
-* _... number of items to replace is not a multiple of replacement length ..._ Your input variable doesn't match the name variable you used in the output when you called `makeFun`. Maybe you used `x` on one side of the tilde `~` and `t` on the other side? 
-
-* _Argument "name" is missing, with no default..._
-You're probably trying to take a derivative or antiderivative without the mosaicCalc package. Go back to the packages section of the introduction for how to fix this.
-
-* _I can't find my data!_  You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.
 

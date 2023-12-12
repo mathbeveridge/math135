@@ -18,6 +18,29 @@ P ~ 6 - 2 * P,
 bounds(t=-8:8, P=-8:8))
 ```
 
+## Creating a Trajectory in RStudio
+
+The `mosaicCalc` package also has a `traj_plot` function that plots a solution curve to a differential equation through a given initial point.
+
+Here is the code to plot the trajectory starting at $P(0)=6$ for the differential equation $\displaystyle{\frac{dP}{dt} = 6 - 2 P}$. In the code below, the `nt` parameter indicated the number of "tick marks" to use along the trajectory.
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  6 - 2 * P )
+soln = integrateODE(dyn, domain(t=0:5), P=6)
+traj_plot(P(t) ~ t, soln,  nt=5) 
+```
+
+In fact, we can get fancier by making a single plot that has two trajectories (one for $P(0)=6$ and one for $P(0)=2$) along with the vector field.
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  6 - 2 * P )
+soln1 = integrateODE(dyn, domain(t=0:5), P=6)
+soln2 = integrateODE(dyn, domain(t=0:5), P=2)
+traj_plot(P(t) ~ t, soln1, color="blue", nt=0) %>%
+  traj_plot(P(t) ~ t, soln2, color="magenta", nt=0) %>%
+  vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, bounds(t=0:5, P=0:8))
+```
+
 ## Activities
 
 
@@ -97,6 +120,32 @@ $$
 $$
 for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
 
+### Trajectories for Population Models
+
+Now create trajectories for the population models in the previous exercise. Create a trajectory for each of the different possible outcomes (increase without bound, stabilize to a constant value, die out) 
+
+1. Exponential growth with harvesting.
+$$
+\frac{dP}{dt} = 0.2 P - 40
+$$
+for  $0 \leq P \leq 300$ and $0 \leq t \leq 100$.
+
+
+2. Constrained growth
+$$
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) 
+$$
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
+
+
+
+3. Constrained growth with constant harvesting
+$$
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
+$$
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
+
+
 ## Solutions
 
 ### Match the Slope Fields
@@ -151,7 +200,7 @@ Create a slope field for each of the following population models. For each one, 
 ```{r, out.width="70%"}
 vectorfield_plot(t ~ 1,
 P ~  0.2 * P -  40,
-bounds(t=0:100, P=0:300))
+bounds(t=0:10, P=0:300))
 ```
 
 * If $P(0) > 200$ then the population increases without bound
@@ -194,3 +243,70 @@ Let's set $\frac{dP}{dt}=0$ and solve to find the equilibrium points. We have
 * If $100 < P(0) < 400$ then the population increases to 400.
 * If $P(0) = 400$ then the population remains at this equilibrium value. This is a stable equilibrium.
 * If $P(0) > 400$ then the population decreases down to 400.
+
+
+### Trajectories for Population Models
+
+Now create trajectories for the population models in the previous exercise. Create a trajectory for each of the different possible outcomes (increase without bound, stabilize to a constant value, die out) 
+
+1. Exponential growth with harvesting.
+$$
+\frac{dP}{dt} = 0.2 P - 40
+$$
+for  $0 \leq P \leq 300$ and $0 \leq t \leq 100$.
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  0.2 * P -  40 )
+soln1 = integrateODE(dyn, domain(t=0:10), P=300)
+soln2 = integrateODE(dyn, domain(t=0:10), P=200)
+soln3 = integrateODE(dyn, domain(t=0:10), P=100)
+traj_plot(P(t) ~ t, soln1,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln2,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln3,  nt=0)
+ 
+```
+
+
+2. Constrained growth
+$$
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) 
+$$
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
+
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  0.05 * P * (1 - 0.002 * P)  )
+soln1 = integrateODE(dyn, domain(t=0:50), P=50)
+soln2 = integrateODE(dyn, domain(t=0:50), P=100)
+soln3 = integrateODE(dyn, domain(t=0:50), P=300)
+soln4 = integrateODE(dyn, domain(t=0:50), P=500)
+soln5 = integrateODE(dyn, domain(t=0:50), P=600)
+traj_plot(P(t) ~ t, soln1,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln2,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln3,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln4,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln5,  nt=0)
+ 
+```
+
+3. Constrained growth with constant harvesting
+$$
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
+$$
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
+
+
+```{r, message=FALSE}
+dyn = makeODE( dP ~  0.05 * P * (1 - 0.002 * P) -4  )
+soln1 = integrateODE(dyn, domain(t=0:20), P=50)
+soln2 = integrateODE(dyn, domain(t=0:50), P=100)
+soln3 = integrateODE(dyn, domain(t=0:50), P=250)
+soln4 = integrateODE(dyn, domain(t=0:50), P=400)
+soln5 = integrateODE(dyn, domain(t=0:50), P=600)
+traj_plot(P(t) ~ t, soln1,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln2,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln3,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln4,  nt=0) %>%
+  traj_plot(P(t) ~ t, soln5,  nt=0)
+ 
+```

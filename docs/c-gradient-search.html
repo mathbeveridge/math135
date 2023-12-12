@@ -142,6 +142,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
 <ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#loading-mosaic-and-mosaiccalc-packages"><i class="fa fa-check"></i>Loading Mosaic and MosaicCalc Packages</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
@@ -168,9 +170,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-a-trajectory-in-rstudio"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
 <ul>
@@ -764,17 +768,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1"><i class="fa fa-check"></i>Creating a Trajectory in RStudio</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-27"><i class="fa fa-check"></i>Activities</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
 <li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#trajectories-for-population-models-1"><i class="fa fa-check"></i>Trajectories for Population Models</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
@@ -841,31 +848,33 @@ whose partial derivatives are
 \frac{\partial f}{\partial x} = 10 x + 2 - 16 y
 \]</span></p>
 <p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="c-gradient-search.html#cb119-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb119-2"><a href="c-gradient-search.html#cb119-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb119-3"><a href="c-gradient-search.html#cb119-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb119-4"><a href="c-gradient-search.html#cb119-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="c-gradient-search.html#cb122-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb122-2"><a href="c-gradient-search.html#cb122-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb122-3"><a href="c-gradient-search.html#cb122-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb122-4"><a href="c-gradient-search.html#cb122-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
 <p>Next, you <strong>repeatedly</strong> run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This takes a small step in the uphill direction.</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="c-gradient-search.html#cb120-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
-<span id="cb120-2"><a href="c-gradient-search.html#cb120-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
-<span id="cb120-3"><a href="c-gradient-search.html#cb120-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
-<span id="cb120-4"><a href="c-gradient-search.html#cb120-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
-<span id="cb120-5"><a href="c-gradient-search.html#cb120-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
-<span id="cb120-6"><a href="c-gradient-search.html#cb120-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
-<span id="cb120-7"><a href="c-gradient-search.html#cb120-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
-<span id="cb120-8"><a href="c-gradient-search.html#cb120-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="c-gradient-search.html#cb123-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb123-2"><a href="c-gradient-search.html#cb123-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb123-3"><a href="c-gradient-search.html#cb123-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb123-4"><a href="c-gradient-search.html#cb123-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb123-5"><a href="c-gradient-search.html#cb123-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb123-6"><a href="c-gradient-search.html#cb123-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
+<span id="cb123-7"><a href="c-gradient-search.html#cb123-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb123-8"><a href="c-gradient-search.html#cb123-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
 <p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
 <p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
 <p>You can check that this critical point is a local maximum (and not a saddle point) by using the same method that we used for 2D Optimizatiion</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="c-gradient-search.html#cb121-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span>x<span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>x<span class="sc">*</span>y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span> y <span class="sc">-</span> <span class="dv">8</span><span class="sc">*</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb121-2"><a href="c-gradient-search.html#cb121-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="fl">1.0405</span></span>
-<span id="cb121-3"><a href="c-gradient-search.html#cb121-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="fl">0.7753</span></span>
-<span id="cb121-4"><a href="c-gradient-search.html#cb121-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
-<span id="cb121-5"><a href="c-gradient-search.html#cb121-5" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
-<span id="cb121-6"><a href="c-gradient-search.html#cb121-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta))</span></code></pre></div>
-<pre><code>##  [1] 0.10152236 0.06983861 0.04586756 0.03913009 0.05231624 0.07998000 0.11073639
-##  [8] 0.13203698 0.13536588 0.11957064 0.09102447 0.06080448 0.04028374 0.03696369
-## [15] 0.05199590 0.08002000 0.11113281 0.13426810 0.14099672 0.12862949 0.10152236</code></pre>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="c-gradient-search.html#cb124-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span>x<span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>x<span class="sc">*</span>y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span> y <span class="sc">-</span> <span class="dv">8</span><span class="sc">*</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb124-2"><a href="c-gradient-search.html#cb124-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="fl">1.0405</span></span>
+<span id="cb124-3"><a href="c-gradient-search.html#cb124-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="fl">0.7753</span></span>
+<span id="cb124-4"><a href="c-gradient-search.html#cb124-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb124-5"><a href="c-gradient-search.html#cb124-5" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb124-6"><a href="c-gradient-search.html#cb124-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta))</span></code></pre></div>
+<pre><code>##  [1] 0.10152236 0.06983861 0.04586756 0.03913009 0.05231624
+##  [6] 0.07998000 0.11073639 0.13203698 0.13536588 0.11957064
+## [11] 0.09102447 0.06080448 0.04028374 0.03696369 0.05199590
+## [16] 0.08002000 0.11113281 0.13426810 0.14099672 0.12862949
+## [21] 0.10152236</code></pre>
 </div>
 <div id="activities-19" class="section level2 hasAnchor">
 <h2>Activities<a href="c-gradient-search.html#activities-19" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -892,20 +901,20 @@ f_x(x,y) = 2x +2y + 3, \qquad f_y(x,y) = 2x + 4 + 10y.
 \]</span>
 Here is our updated code to walk downhill. We set up our partials and pick our starting point.</p></li>
 </ol>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="c-gradient-search.html#cb123-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span><span class="dv">2</span><span class="sc">*</span>y <span class="sc">+</span> <span class="dv">3</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb123-2"><a href="c-gradient-search.html#cb123-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb123-3"><a href="c-gradient-search.html#cb123-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb123-4"><a href="c-gradient-search.html#cb123-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="c-gradient-search.html#cb126-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span><span class="dv">2</span><span class="sc">*</span>y <span class="sc">+</span> <span class="dv">3</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb126-2"><a href="c-gradient-search.html#cb126-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb126-3"><a href="c-gradient-search.html#cb126-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb126-4"><a href="c-gradient-search.html#cb126-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
 <p>Now we repeatedly run this “move downhill” block until the partial derivatives are (basically) zero.</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="c-gradient-search.html#cb124-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
-<span id="cb124-2"><a href="c-gradient-search.html#cb124-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
-<span id="cb124-3"><a href="c-gradient-search.html#cb124-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
-<span id="cb124-4"><a href="c-gradient-search.html#cb124-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
-<span id="cb124-5"><a href="c-gradient-search.html#cb124-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
-<span id="cb124-6"><a href="c-gradient-search.html#cb124-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="c-gradient-search.html#cb127-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb127-2"><a href="c-gradient-search.html#cb127-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb127-3"><a href="c-gradient-search.html#cb127-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb127-4"><a href="c-gradient-search.html#cb127-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb127-5"><a href="c-gradient-search.html#cb127-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb127-6"><a href="c-gradient-search.html#cb127-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span></code></pre></div>
 <pre><code>## [1] 4.7 7.3</code></pre>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="c-gradient-search.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
-<span id="cb126-2"><a href="c-gradient-search.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="c-gradient-search.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb129-2"><a href="c-gradient-search.html#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
 <pre><code>## [1] 0.65 0.20</code></pre>
 <p>If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point <span class="math inline">\((-1.37, -0.13)\)</span>.</p>
 
