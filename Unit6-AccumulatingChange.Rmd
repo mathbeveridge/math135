@@ -214,7 +214,7 @@ sum(areas)
 
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)
-plotFun(f(x)~x, xlim=c(0,4))
+slice_plot(f(x)~x, domain(x=0:4)) + ylab("f(x)")
 ``` 
 
 It is **not** clear whether any of these values is an over-estimate or an under-estimate. There is a maximum at $x=2.75$. 

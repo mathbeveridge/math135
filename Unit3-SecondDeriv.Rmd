@@ -28,7 +28,8 @@ The Second Derivative
 Here is a plot of the function $f(x)$.
 ```{r, echo=FALSE}
 
-plotFun(10 * (x-1)*(x-2)*(x)*(x+1) /(exp(x^2)+1)~x, xlim=c(0,3), ylab = "f(x)")
+slice_plot(10 * (x-1)*(x-2)*(x)*(x+1) /(exp(x^2)+1)~x, 
+           domain(x=0:3)) + ylab("f(x)")
 
 ```
 
@@ -52,7 +53,8 @@ Here is a plot of **velocity** $v(t)$ of an object.
 
 
 ```{r, echo=FALSE}
-plotFun(sqrt(x) * sin( pi * x)~x, xlim=c(0,2), xlab='t', ylab='v(t)')
+slice_plot(sqrt(t) * sin( pi * t)~t, 
+           domain(t=0:2)) + ylab("v(t)")
 
 ```
 

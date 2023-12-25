@@ -23,11 +23,11 @@ sum(areas)
 
 A car is driving at a rate of $v(t)=-t+5$. Here is a plot of the velocity.
 
-```{r  echo=FALSE, fig.keep='last'}
-plotFun(-t+5~t, xlim=range(0,12),xlab='t',ylab='v(t)')
-plotFun(0*t~t, add=TRUE)
-```
 
+
+```{r def-integral-plot1, echo=FALSE, fig.keep='last'}
+slice_plot(-t+5~t, domain(t=0:12)) + geom_hline(yintercept=0) + ylab("v(t)")
+```
 
 1. Use RStudio to approximate these definite integrals using 1000 subintervals.
   a. $\displaystyle{\int_0^5 v(x)dx}$
@@ -43,10 +43,10 @@ plotFun(0*t~t, add=TRUE)
 
 A car is traveling at 55 feet per second at time $t=0$. The plot below shows the car's **acceleration** on the interval $[0,18]$.
 
-```{r echo=FALSE, fig.align="center", fig.keep="last"}
+```{r def-integral-plot2, echo=FALSE, fig.align="center", fig.keep="last"}
 a=makeFun(ifelse(x<2,8,ifelse(x<10,-2*x+12,ifelse(x<14,-8,ifelse(x<18,4*x-64,8))))~x)
-plotFun(a(t)~t,xlim=range(0,18))
-plotFun(0*t~t, add=TRUE)
+
+slice_plot(a(t)~t, domain(t=0:12)) +geom_hline(yintercept=0) + ylab("a(t)")
 ```
 
 1. Is the velocity increasing or decreasing at $t=2$? $t=15$? 
@@ -73,11 +73,12 @@ where $q$ is in dozens of cupcakes.
 Below is a graph of both $\sin(x)$ and $\cos(x)$ on the interval $[0,2\pi]$. 
 
 
-
-```{r fig.align="center", fig.keep='last'}
-plotFun(sin(x)~x,xlim=range(0,2*pi),ylim=range(-1.1,1.1),xlab="",ylab="")
-plotFun(cos(x)~x,add=TRUE)
+```{r def-integral-plot3}
+slice_plot(sin(x)~x, domain(x=0:2*pi)) %>% 
+  slice_plot(cos(x)~x) +
+  scale_x_continuous(breaks=seq(0,2*pi,pi/4),labels=c("0", "\u03c0/4", "\u03c0/2", "3\u03c0/4", "\u03c0","5\u03c0/4", "3\u03c0/2", "7\u03c0/2", "2\u03c0"))
 ```
+
 
 1. Write a **sum of integrals** which represents the \emph{area} enclosed by the two curves.   
 Hint: $\sin(x) = \cos(x)$ at $x=\pi/4$ and $x=5\pi/4$.

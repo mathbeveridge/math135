@@ -84,7 +84,7 @@ Sketch each of the following:
 
 ```{r, echo=FALSE}
 
-plotFun(x^2~x, xlim = c(0,4))
+slice_plot(x^2~x, bounds(x=0:4))
 
 ```
 
@@ -93,7 +93,7 @@ plotFun(x^2~x, xlim = c(0,4))
 
 ```{r, echo=FALSE}
 
-plotFun(x^(1/2)~x, xlim = c(0,4))
+slice_plot(x^(1/2)~x, bounds(x=0:4))
 
 ```
 
@@ -101,7 +101,7 @@ plotFun(x^(1/2)~x, xlim = c(0,4))
 
 ```{r, echo=FALSE}
 
-plotFun(2-x^(1/2)~x, xlim = c(0,4))
+slice_plot(2-x^(1/2)~x, bounds(x=0:4))
 
 ```
 
@@ -110,7 +110,7 @@ plotFun(2-x^(1/2)~x, xlim = c(0,4))
 
 ```{r, echo=FALSE}
 
-plotFun(16 - x^2~x, xlim = c(0,4))
+slice_plot(16 - x^2~x, bounds(x=0:4))
 
 ```
 

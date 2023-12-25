@@ -52,22 +52,22 @@ Multiple 2D functions have been (contour) plotted below. For each, identify the 
 
 ```{r fig.align="center"}
 f = makeFun(x^2+y^2+3~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-2,2), ylim=range(-2,2), filled=FALSE)
+contour_plot(f(x,y)~x&y, domain(x=-2:2, y=-2:2), skip = 0)
 ```
 
 ```{r fig.align="center"}
 f = makeFun(-x*y*exp(-x^2-y^2)~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-1.5,1.5), ylim=range(-1.5,1.5), filled=FALSE)
+contour_plot(f(x,y)~x&y, domain(x=-1.5:1.5, y=-1.5:1.5), skip = 0)
 ```
 
 ```{r fig.align="center"}
 f = makeFun(y^2-x^2~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-2,2), ylim=range(-2,2), filled=FALSE)
+contour_plot(f(x,y)~x&y, domain(x=-2:2, y=-2:2), skip = 0)
 ```
 
 ```{r fig.align="center"}
 f = makeFun(cos(x)*(x^2-y^2)~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-1.5,1.5), ylim=range(-1.5,1.5), filled=FALSE)
+contour_plot(f(x,y)~x&y, domain(x=-1.5:1.5, y=-1.5:1.5), skip = 1)
 ```
 
 
@@ -200,14 +200,14 @@ We have $D(0,0) = -9$ so $(0,0)$ is a saddle point. We have $D(1/2,1/4)= 3 \cdot
 
 ```{r fig.align="center"}
 f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-1,1), ylim=range(-1,1), filled=FALSE, levels=c(0,2.5,5,7.5,10,12.5,15))
+contour_plot(f(x,y)~x&y, domain(x=-1:1, y=-1:1), skip=0)
 ```
 
 Here is another plot that zooms in on $(1/2,1/4)$. It is clear that this is a local minimum.
 
 ```{r fig.align="center"}
 f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
-plotFun(f(x,y)~x&y, xlim=range(0,1), ylim=range(0,1), filled=FALSE)
+contour_plot(f(x,y)~x&y, domain(x=0:1, y=0:1), skip = 0)
 ```
 
 

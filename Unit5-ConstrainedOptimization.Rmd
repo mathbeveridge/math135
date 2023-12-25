@@ -4,16 +4,21 @@
 
 Here is some example code to create a plot of an objective function $P(x,y) =  x^{0.2} y^{0.8}$ and a constraint function $Q(x,y)=4x + 3y=200$.
 
-```{r eval=FALSE}
+
+```{r constrained-opt-plot1}
 
 P = makeFun( x^(0.2) * y^(0.8) ~ x&y)
 Q = makeFun( 4*x + 3*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,4))
-
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
+contour_plot(P(x,y)~x&y, domain(x=0:40, y=20:80), 
+             contours_at=seq(20,70,6), skip=0) |>
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(200), label_placement=.25)
 
 ```
+
+
+
 
 
 ## Activities
@@ -59,71 +64,64 @@ Below is a plot of an objective function $f(x,y)$ in red, and its constraint fun
 
 1. Here is our plot of the objective function $P(x,y)$ and the constraint $Q(x,y) = 500$.
 
-```{r fig.show='hide'}
+```{r constrained-opt-plot2 , message=FALSE}
 
 P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
 Q = makeFun( 5*x + 4*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
-```
-
-
-```{r}
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
+contour_plot(P(x,y)~x&y, domain(x=0:100, y=0:100), skip=0) |> 
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(500), label_placement=.25)
 
 ```
+
 
 The maximum output for our budget occurs where the $Q(x,y)=500$ constraint is tangent to a contour of $P(x,y)$. This occurs at (approximately) the point $(38,78)$ and we estimate that the maximum production is $P(38,78)=60$.
 
-2. We need to make a new plot using an updated constraint function. 
+2. We need to make a new plot using an updated objective function. 
 
-```{r fig.show='hide'}
+```{r constrained-opt-plot3, message=FALSE}
 
 P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
 Q = makeFun( 7*x + 4*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
+contour_plot(P(x,y)~x&y, domain(x=0:100, y=0:100), skip=0) |> 
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(500), label_placement=.25)
+
 ```
 
 
-```{r}
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
-```
 
 Now, the constraint isn't tangent to any of the shown contours, but it IS tangent to a contour that we haven't drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let's make another plot on a smaller domain and pick some contours to draw.
 
-```{r fig.show='hide'}
-plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(47,66,3))
+```{r constrained-opt-plot4, message=FALSE}
+contour_plot(P(x,y)~x&y, domain(x=0:50, y=50:100), skip=0, 
+             contours_at = seq(23,73,5)) |> 
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(500), label_placement=.25)
 ```
 
-```{r}
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
-```
-
-After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
+After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
 
 3. Now we return to the original constraint function, but decrease the budget to $300$.
 
-```{r fig.show='hide'}
+```{r constrained-opt-plot5, message=FALSE}
 
 P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
-Q = makeFun( 5*x + 4*y ~ x&y)
+Q = makeFun( 7*x + 4*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE, levels=seq(15,85,10))
+contour_plot(P(x,y)~x&y, domain(x=0:50, y=25:75), skip=0) |> 
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(300), label_placement=.25)
 ```
 
-```{r}
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=300)
-```
-
-The optimal point is at $(21,40)$ and the optimal production is approximately $f(21,40)=35$. (This is a slight under-estimate, but it's pretty close.)
+The optimal point is at $(21,40)$ and the optimal production is approximately $f(21,40)=32$.
 
 ### Constrained Optimization on a Circle
 
 1. The minimum is approximately $f(1.5, 1.5) = 20$.
 1. The maximum is approximately $f(4.5, 4.5) = 210$.
-
-
 
 
 

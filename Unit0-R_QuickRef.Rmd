@@ -1,4 +1,4 @@
-# RStudio Quick Referrence
+# RStudio Quick Reference
 
 ## Loading Mosaic and MosaicCalc Packages
 
@@ -107,13 +107,12 @@ my_seq3
 ### Plotting Data
 
 
-Use `plotPoints` to plot a list of $y$-axis data versus a list of $x$-axis data. Separate these lists with a tilde `~`. 
+Use `gf_point` to plot a list of $y$-axis data versus a list of $x$-axis data. Separate these lists with a tilde `~`. 
 
 ```{r}
-
 X = seq(1:5)
 Y = X^2
-plotPoints(Y ~ X)
+gf_point(Y ~ X)
 
 ```
 
@@ -122,60 +121,68 @@ plotPoints(Y ~ X)
 
 x_data = c(2,3,5,8,13)
 y_data = c(2,4,8,4,2)
-plotPoints(y_data ~ x_data)
+gf_point(y_data ~ x_data)
 
 ```
+
+
+The prefix `gf` in the name `gf_point`is short for "graph formula."
 
 ### Plotting Functions
-Use `plotFun` to plot a function. 
+Use `slice_plot` to plot a function. 
 
-* As with `plotPoints`, we use a tilde `~` to separate the output variable (the function) from the input variable.
-* The optional `xlim` argument specifies the domain for the plot.
+* As with `gf_point`, we use a tilde `~` to separate the output variable (the function) from the input variable.
+* The required `bounds` argument specifies the domain for the plot.
 
 ```{r}
-plotFun(sin(x) ~ x)
-
-plotFun(sin(x) ~ x, xlim=c(0, 2*pi))
+slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue')
 ```
 
-We can layer one plot on top of another by using the `add=TRUE` argument.
-
-* You only need to specify the `xlim` for the **first plot** because the second one is added to the first.
-* It's helpful to change the color for subsequent plots. Use the argument `col="red"` using any color name you like (RStudio knows a lot of colors!)
-
+You can add a label to the plot, or to the axes. You do this by 
 
 ```{r}
-plotFun(2 * sin(x) ~ x, xlim=c(0, 2*pi))
-plotFun(cos(3*x) ~ x, add=TRUE, col='green')
-```
-
-We can label the axes using `xlab` and `ylab`. When you are layering two plots, you must specify these labels in the first function that you plot!
-
-
-```{r}
-plotFun(2 * sin(x) ~ x, xlim=c(0, 2*pi), xlab='time', ylab='displacement')
-plotFun(cos(3*x) ~ x, add=TRUE, col='green')
+slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue') + 
+  ylab('sin(x)') + xlab('x values') + labs(title="y=sin(x)")
 ```
 
 
 
-The `plotFun` command takes a whole variety of parameters, here are a few useful ones:
 
-* `xlim`, `ylim`: sets the range of your $x$-axis. Example: `xlim=range(1,4), ylim=range(3,60)`
-* `col`: sets the color of the function you plot. RStudio will recognize most basic colors, which you will pass as strings. Example: `col="red"`
-* `add`: you'll use this when you want to add multiple functions to the same plot. We'll see an example of it below.
-Example: `add=TRUE`
-* `xlab`, `ylab`: for labeling your axes. You'll pass this as a string as well. Example: `xlab="time", ylab="red=velocity, blue=position"`
+We can layer one plot on top of another by using a pipe `%>%` 
+* You only need to specify the `bounds` for the **first plot** because the second one is added to the first.
+* It's helpful to change the color for subsequent plots. Use the argument `color="red"` using any color name you like (RStudio knows a lot of colors!)
+
+
+```{r}
+slice_plot(2 * sin(x) ~ x, bounds(x=0:2*pi)) %>%
+slice_plot(cos(3*x) ~ x, color='green')
+```
+
+* The %>% symbol is pronounced "pipe." The pipe *must* appear at the end of the line (not at the start of the next line).
+* A command involving a pipe is called a "pipeline." Think of the calculation as flowing from one command to the next, left to right.
+* If you have specified the bounds() at an early stage in the pipeline, you don’t need to specify it again in the later plotting commands. But, if you want, feel free to set the bounds explicitly. This is helpful if you want the graphics bounds to be different for the different layers.
+* Pro Tip: write a pipeline with one line for each stage, with the pipe symbol at the end of each stage.
+
+
+
+
+
+
+
+The `slice_plot` command takes a whole variety of parameters, here are a few useful ones:
+
+* `domain`: sets the range of your $x$-axis. Example: `domain(x=1:4)`.
+* `color`: sets the color of the function you plot. RStudio will recognize most basic colors, which you will pass as strings. Example: `color="red"`.
+
 
 
 Let's try some of this out. I broke the third line so it would all fit, you don't need to!
 
-```{r fig.align='center',fig.width=4.5, fig.height=2.5, fig.show='hold'}
+```{r fig.align='center',fig.width=3, fig.height=2.5, fig.show='hold'}
 f=makeFun(x^3+3~x)
 g=makeFun(3*x^2~x)
-plotFun(f(x)~x, xlim=range(1,4), ylim=range(3,60), 
-        col="blue",xlab="time", ylab="red=velocity, blue=position")
-plotFun(g(x)~x, col="red", add=TRUE)
+slice_plot(f(x)~x, domain(x=1:4), color="blue") %>%
+slice_plot(g(x)~x, col="red") + xlab("time")  + ylab("red=velocity, blue=position")
 ```
 
 RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
@@ -216,8 +223,8 @@ This output says that the best fitting linear function has slope $A=1.70$ and $y
 ```{r}
 f = makeFun(1.70 *  x + 4.18 ~ x)
 
-plotPoints(ydata ~ xdata)
-plotFun(f(x) ~ x,  add=TRUE, col='orange')
+gf_point(ydata ~ xdata) %>%
+slice_plot(f(x) ~ x, domain(x=1:5), color='orange')
 ```
 
 #### Fitting a Power Function to Data
@@ -251,8 +258,8 @@ p
 c = exp(1.92)
 c
 
-plotPoints(ydata ~ xdata)
-plotFun(6.82 * x^1.45 ~ x, add=TRUE, col='orange')
+gf_point(ydata ~ xdata) %>%
+  slice_plot(6.82 * x^1.45 ~ x, domain(x=1:9),  color='orange')
 
 ```
 
@@ -273,17 +280,18 @@ head(utilitydata)
 Now let's plot temperature versus month
 
 ```{r}
-plotPoints(temp ~ month, data=utilitydata)
+gf_point(temp ~ month, data=utilitydata)
 ```
 
-We have ploted monthly temperature data for multiple years. Let's try to fit a periodic function.
+We have plotted monthly temperature data for multiple years. Let's try to fit a periodic function.
 
 ```{r}
 M = fitModel(temp ~ A * sin(w*(month + p))+C, data=utilitydata)
 coef(M)
 
 f = makeFun(-28.7 * sin(-6.8*(t + 56.2))+47.2 ~ t)
-plotFun(f(t)~t, add=TRUE, col='red')
+gf_point(temp ~ month, data=utilitydata) %>%
+  slice_plot(f(t)~t, domain(t=0:13), color='red')
 ```
 
 This is not what we wanted! It looks like `fitModel` was confused by the multiple data points for each month. So the frequency `w` is completely wrong. We can correct this by specifying an initial guess for `w`. We think that the period should be 12 months, so we want to start with `w=2*pi/12`.
@@ -293,7 +301,8 @@ M = fitModel(temp ~ A * sin(w*(month + p))+C, data=utilitydata, start=list(w=2*p
 coef(M)
 
 f = makeFun(-28.7 * sin(0.5*(t -22.8))+47.2 ~ t)
-plotFun(f(t)~t, add=TRUE, col='orange')
+gf_point(temp ~ month, data=utilitydata) %>%
+  slice_plot(f(t)~t, domain(t=0:13), color='red')
 ```
 
 
@@ -304,37 +313,45 @@ That looks much better!
 
 ### Plotting Surfaces in 3D
 
-We plot functions $z = f(x,y)$ using the `plotFun()` command. We specify the independent variables with the syntax `~ x&y`. By default, RStudio will create a **contour plot** of this function and include **shading** to help visualize the values of the function.
+We plot functions $z = f(x,y)$ using the `contour_plot` command. We specify the independent variables with the syntax `~ x&y`. 
 
 
 ```{r}
 f = makeFun(x^2 - y^2 ~ x&y)
 
-plotFun(f(x,y) ~ x&y)
+contour_plot(f(x,y) ~ x&y, domain(x=-2:2, y=-2:2))
+
+```
+
+By default, RStudio labels every other countour. We can change this using the `skip` parameter. The default value of `skip` is 1. If we want to label every contour, we set `skip=0`.
+```{r}
+f = makeFun(x^2 - y^2 ~ x&y)
+
+contour_plot(f(x,y) ~ x&y, domain(x=-2:2, y=-2:2), skip=0)
 
 ```
 
 You can add more contours using the `levels` parameter, and turn off the shading with the `filled` parameter.
 
 ```{r}
-plotFun(f(x,y) ~ x&y, levels = seq(-1 ,1, .2), filled = FALSE)
+contour_plot(f(x,y) ~ x&y, domain(x=-2:2, y=-2:2), contours_at = seq(-3 ,3, .5))
 
 ```
 
 
-You can change the plot range using `xlim` and `ylim`. 
+You can change the plot range using `domain`. 
 
 ```{r}
-plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20))
+contour_plot(f(x,y) ~ x&y, domain(x=-20:20, y=-20:20))
 ```
 
-You can create a 3D plot by setting `surface=TRUE`.
+You can create a 3D plot  `interactive_plot`.
 
 ```{r}
-plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20), surface=TRUE, alpha=1)
+interactive_plot(f(x,y) ~ x&y, domain(x=-20:20, y=-20:20))
 ```
 
-## Differentiaation
+## Differentiation
 
 ### Estimating the Derivative
 
@@ -445,23 +462,30 @@ We want to make a contour plot of $P(x,y)$ and then add the constraint. The maxi
 P = makeFun( x^(0.2) * y^(0.8) ~ x&y)
 Q = makeFun( 4*x + 3*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,80), ylim=c(0,80), filled=FALSE, levels=seq(20,80,5))
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
+contour_plot(P(x,y)~x&y, domain(x=0:80, y=0:80), 
+             contours_at=seq(20,80,5), skip=0) |>
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(200), label_placement=.25)
 ```
 
 In this case, the optimal value of $38$ is achieved at approximately $(10, 55)$. Let's make another plot to  get a better estimate.
 
 ```{r}
-plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
+
+contour_plot(P(x,y)~x&y, domain(x=0:40, y=20:60), 
+             contours_at=seq(20,50,2), skip=0) |>
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(200), label_placement=.25)
 ```
 On this zoomed in plot, we can refine our estimate a bit. The maximum $f(10,53)=38$ is achieved at $x=10$ and $y=53$.
 
 Now, if I want to estimate the Lagrange multiplier $\lambda$, I would change my constraint a little bit (say to $210$) and then look at the change in the optimal value.
 
 ```{r}
-plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
-plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=c(200,210))
+contour_plot(P(x,y)~x&y, domain(x=0:40, y=20:60), 
+             contours_at=seq(20,50,2), skip=0) |>
+  contour_plot(Q(x,y) ~ x & y, contour_color="black", 
+               contours_at=c(200,210), label_placement=.25)
 ```
 
 We have
@@ -523,7 +547,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist)
+gf_point(xlist ~ tlist)
 ```
 
 ### Slope Fields

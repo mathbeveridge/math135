@@ -90,7 +90,7 @@ to find that $10t = 224$ and so $t=22.4$ minutes.
 
 1. In the graph below, the blue function is well estimated by its tangent line, while the red function is not.
 
-![](images/linear-approx.png){width=30%}
+![](images/linear-approx.png){width=60%}
 
 2. If the curve has low concavity near the point $x=a$ then the tangent line is a good approximation. In other words, the second derivative remains near zero around the point $x=a$
 2. If the curve has a lot of concavity near the point $x=a$ then then tangent line is not a good approximation. This is because the curve bends away from the tangent line.

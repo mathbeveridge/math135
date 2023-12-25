@@ -63,7 +63,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist)
+gf_point(xlist ~ tlist) + xlab("t") + ylab("x(t)")
 ```
 
 ##  Activities
@@ -204,7 +204,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist, xlab="time", ylab="Q(t)")
+gf_point(xlist ~ tlist) + xlab("time") + ylab("Q(t)")
 ```
 
 
@@ -242,7 +242,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist, xlab="time", ylab="Q(t)")
+gf_point(xlist ~ tlist) + xlab("time") + ylab("P(t)")
 ```    
     
 b. $\triangle t = 1$
@@ -269,7 +269,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist, xlab="time", ylab="Q(t)")
+gf_point(xlist ~ tlist) + xlab("time") + ylab("P(t)")
 ```
 
 c. $\triangle t = 0.1$ 
@@ -296,7 +296,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist, xlab="time", ylab="Q(t)")
+gf_point(xlist ~ tlist) + xlab("time") + ylab("P(t)")
 ```
 
 d. $\triangle t = 0.01$ 
@@ -323,7 +323,7 @@ for (i in 1:num) {
 # print the ending point
 c(tail(tlist,1),  tail(xlist,1))
 # plot the approximate function
-plotPoints(xlist ~ tlist, xlab="time", ylab="Q(t)")
+gf_point(xlist ~ tlist) + xlab("time") + ylab("P(t)")
 ```
 
 

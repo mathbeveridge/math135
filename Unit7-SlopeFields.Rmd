@@ -212,8 +212,6 @@ Here are some trajectories (not necessarily the ones that go through the three p
 dyn = makeODE( dP ~  -0.04 * P -  20 )
 soln1 = integrateODE(dyn, domain(t=0:50), P=2000)
 traj_plot(P(t) ~ t, soln1,  nt=10)
-
- 
 ```
 
 

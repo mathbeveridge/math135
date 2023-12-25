@@ -62,7 +62,9 @@ The command line console is the most basic way to run code. It's great for simpl
 
 RStudio is open source, which means many people write packages to augment what it can do by default. Their work is our gain, and we'll need a few packages to be able to access what we want. In the lower right hand panel click on the packages tab. Then click on the check boxes next to the following packages:
 
+<!--
 * fetch: this package knows how to load in data files
+-->
 * mosaic, mosaicCore, mosaicData: these contain the specific built-ins which create and plot functions for us. By checking the box by them, we import their functions into the session. Easy enough.
 * mosaicCalc: Some of the function commands from the mosaic family of packages don't interact well with the built in derivative and antiderivative functions in RStudio. mosaicCalc fixes this
    * If you don't see mosaicCalc, then you need to download it. Run the following line of code in your console: `install.packages("mosaicCalc")` Once you do this, make sure that the mosaicCal box is checked in the packages list

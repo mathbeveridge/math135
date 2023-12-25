@@ -30,6 +30,7 @@ You will need to replace the auto-generated code block at the top of your Rmd fi
 ```{r setup, include=FALSE, warning=FALSE}`r ''`
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
+suppressPackageStartupMessages(library(mosaicCalc))
 ```
 ````
 
@@ -229,7 +230,7 @@ from the function $h(x)=x^2$.
 
 X = seq(0,5)
 Y = X^2
-plotPoints(Y ~ X)
+gf_point(Y ~ X)
 ```
 
 Notice! We list the **dependent** variable `Y` first and then the **independent** variable `X` after the tidle `~` (which matches the syntax of `makeFun`).
@@ -238,8 +239,8 @@ We can also plot a function. Once again the dependent variable appears after the
 
 ```{r, echo=TRUE}
 
+slice_plot(x^2 ~ x, domain(x=-2:2))
 
-plotFun(x^2 ~ x)
 ```
 
 
@@ -248,8 +249,8 @@ We can actually plot the data and the function on the same graph. We will plot t
 
 ```{r, echo=TRUE}
 
-plotPoints(Y ~ X)
-plotFun(x^2 ~ x, add=TRUE, col='red')
+gf_point(Y ~ X) %>%
+  slice_plot(x^2 ~ x, domain(x=0:5),color='red')
 ```
 
 #### You Try
