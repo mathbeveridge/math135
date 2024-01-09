@@ -40,7 +40,7 @@ axis(side=1, at=c(0,5*pi, 10*pi, 15*pi, 20*pi), labels=c("0",expression(5*pi), e
 
 ```{r periodic4, echo=FALSE, out.width="75%"}
 
-slice_plot(cos(3*x)+2~x, bounds(x=-7:7)) + scale_x_continuous(breaks=seq(-2*pi,2*pi,pi/2),labels=c("-2\u03c0","-3\u03c0/2","-\u03c0","-\u03c0/2", "0", "\u03c0/2", "\u03c0", "3\u03c0/2", "2\u03c0"))
+slice_plot(cos(3*x)+2~x, domain(x=-7:7)) + scale_x_continuous(breaks=seq(-2*pi,2*pi,pi/2),labels=c("-2\u03c0","-3\u03c0/2","-\u03c0","-\u03c0/2", "0", "\u03c0/2", "\u03c0", "3\u03c0/2", "2\u03c0"))
 
 ```
 
@@ -52,7 +52,7 @@ slice_plot(cos(3*x)+2~x, bounds(x=-7:7)) + scale_x_continuous(breaks=seq(-2*pi,2
 
 ```{r periodic5, echo=FALSE, out.width="75%"}
 
-slice_plot(-7*sin(2*pi/3*x)~x, bounds(x=0:9)) + scale_x_continuous(breaks=seq(0,9,1))
+slice_plot(-7*sin(2*pi/3*x)~x, domain(x=0:9)) + scale_x_continuous(breaks=seq(0,9,1))
 
 ```
 

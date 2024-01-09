@@ -40,7 +40,7 @@ The horizontal axis is the susceptible population and the vertical axis is the i
 ```{r, eval=FALSE}
 vectorfield_plot(S ~ - 0.001*S*I, 
                  I ~ 0.001*S*I -0.2*I, 
-                 bounds(S=0:800, I=0:100), 
+                 domain(S=0:800, I=0:100), 
                  transform=function(L) L^0.01)
 ```
 
@@ -83,7 +83,7 @@ Here is the slope field for an SIR Model. The horizontal axis is the Susceptible
 ```{r, echo=FALSE, out.width="70%"}
 vectorfield_plot(S ~ - 0.002*S*I, 
                  I ~ 0.002*S*I -0.5*I, 
-                 bounds(S=0:600, I=0:50), 
+                 domain(S=0:600, I=0:50), 
                  transform=function(L) L^0.1)
 ```
 

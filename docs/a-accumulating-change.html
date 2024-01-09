@@ -1068,7 +1068,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ol>
 <div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="a-accumulating-change.html#cb173-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
 <span id="cb173-2"><a href="a-accumulating-change.html#cb173-2" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_plot</span>(<span class="fu">f</span>(x)<span class="sc">~</span>x, <span class="fu">domain</span>(<span class="at">x=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>)) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;f(x)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
 <p>It is <strong>not</strong> clear whether any of these values is an over-estimate or an under-estimate. There is a maximum at <span class="math inline">\(x=2.75\)</span>.</p>
 <ul>
 <li>A left endpoint estimate will be an under-estimate on <span class="math inline">\([0,2.75]\)</span> and an over-estimate on <span class="math inline">\([2.75,4]\)</span>.</li>

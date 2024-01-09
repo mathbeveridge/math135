@@ -133,16 +133,16 @@ gf_point(y_data ~ x_data, xlab='day', ylab='rainfall (mm)')
 Use `slice_plot` to plot a function. 
 
 * As with `gf_point`, we use a tilde `~` to separate the output variable (the function) from the input variable.
-* The required `bounds` argument specifies the domain for the plot.
+* The required `domain` argument specifies the domain for the plot.
 
 ```{r}
-slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue')
+slice_plot(sin(x) ~ x, domain(x=0:2*pi), color='blue')
 ```
 
 You can add a label to the plot, or to the axes. You do this by 
 
 ```{r}
-slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue') + 
+slice_plot(sin(x) ~ x, domain(x=0:2*pi), color='blue') + 
   ylab('sin(x)') + xlab('x values') + labs(title="y=sin(x)")
 ```
 
@@ -151,18 +151,18 @@ slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue') +
 
 We can layer one plot on top of another by using a pipe `%>%`.
 
-* You `only need to specify the `bounds` for the **first plot** because the second one is added to the first.
+* You only need to specify the `domain` for the **first plot** because the second one is added to the first.
 * It's helpful to change the color for subsequent plots. Use the argument `color="red"` using any color name you like (RStudio knows a lot of colors!)
 
 
 ```{r}
-slice_plot(2 * sin(x) ~ x, bounds(x=0:2*pi)) %>%
+slice_plot(2 * sin(x) ~ x, domain(x=0:2*pi)) %>%
 slice_plot(cos(3*x) ~ x, color='green')
 ```
 
-* The %>% symbol is pronounced "pipe." The pipe *must* appear at the end of the line (not at the start of the next line).
+* The `%>%` symbol is pronounced "pipe." The pipe *must* appear at the end of the line (not at the start of the next line).
 * A command involving a pipe is called a "pipeline." Think of the calculation as flowing from one command to the next, left to right.
-* If you have specified the bounds() at an early stage in the pipeline, you don’t need to specify it again in the later plotting commands. But, if you want, feel free to set the bounds explicitly. This is helpful if you want the graphics bounds to be different for the different layers.
+* If you have specified the `domain()` at an early stage in the pipeline, you don’t need to specify it again in the later plotting commands. But, if you want, feel free to set the domain explicitly. This is helpful if you want the graphics domain to be different for the different layers.
 * Pro Tip: write a pipeline with one line for each stage, with the pipe symbol at the end of each stage.
 
 
@@ -566,7 +566,7 @@ Here is the code to create the slope field for $\displaystyle{\frac{dP}{dt} = 5 
 ```{r}
 vectorfield_plot(t ~ 1,
 P ~ 6 - 2 * P,
-bounds(t=-8:8, P=-8:8))
+domain(t=-8:8, P=-8:8))
 ```
 
 ### Creating a Trajectory in RStudio
@@ -589,7 +589,7 @@ soln1 = integrateODE(dyn, domain(t=0:5), P=6)
 soln2 = integrateODE(dyn, domain(t=0:5), P=2)
 traj_plot(P(t) ~ t, soln1, color="blue", nt=5) %>%
   traj_plot(P(t) ~ t, soln2, color="magenta", nt=5) %>%
-  vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, bounds(t=0:5, P=0:8))
+  vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, domain(t=0:5, P=0:8))
 ```
 
 ### SIR Model
@@ -614,7 +614,7 @@ The horizontal axis is the susceptible population and the vertical axis is the i
 ```{r}
 vectorfield_plot(S ~ - 0.001*S*I, 
                  I ~ 0.001*S*I -0.2*I, 
-                 bounds(S=0:800, I=0:100), 
+                 domain(S=0:800, I=0:100), 
                  transform=function(L) L^0.01)
 ```
 
