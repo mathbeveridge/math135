@@ -857,7 +857,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="d-slope-fields.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb213-2"><a href="d-slope-fields.html#cb213-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
 <span id="cb213-3"><a href="d-slope-fields.html#cb213-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-158-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
 </div>
 <div id="creating-a-trajectory-in-rstudio-1" class="section level2 hasAnchor">
 <h2>Creating a Trajectory in RStudio<a href="d-slope-fields.html#creating-a-trajectory-in-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -866,7 +866,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="d-slope-fields.html#cb214-1" aria-hidden="true" tabindex="-1"></a>dyn <span class="ot">=</span> <span class="fu">makeODE</span>( dP <span class="sc">~</span>  <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P )</span>
 <span id="cb214-2"><a href="d-slope-fields.html#cb214-2" aria-hidden="true" tabindex="-1"></a>soln <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">P=</span><span class="dv">6</span>)</span>
 <span id="cb214-3"><a href="d-slope-fields.html#cb214-3" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln,  <span class="at">nt=</span><span class="dv">5</span>) </span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
 <p>In fact, we can get fancier by making a single plot that has two trajectories (one for <span class="math inline">\(P(0)=6\)</span> and one for <span class="math inline">\(P(0)=2\)</span>) along with the vector field.</p>
 <div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="d-slope-fields.html#cb215-1" aria-hidden="true" tabindex="-1"></a>dyn <span class="ot">=</span> <span class="fu">makeODE</span>( dP <span class="sc">~</span>  <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P )</span>
 <span id="cb215-2"><a href="d-slope-fields.html#cb215-2" aria-hidden="true" tabindex="-1"></a>soln1 <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">P=</span><span class="dv">6</span>)</span>
@@ -874,7 +874,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb215-4"><a href="d-slope-fields.html#cb215-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln1, <span class="at">color=</span><span class="st">&quot;blue&quot;</span>, <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb215-5"><a href="d-slope-fields.html#cb215-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln2, <span class="at">color=</span><span class="st">&quot;magenta&quot;</span>, <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb215-6"><a href="d-slope-fields.html#cb215-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>, P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P, <span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-160-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
 </div>
 <div id="activities-27" class="section level2 hasAnchor">
 <h2>Activities<a href="d-slope-fields.html#activities-27" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1053,7 +1053,7 @@ Slope Field D
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="d-slope-fields.html#cb216-1" aria-hidden="true" tabindex="-1"></a>dyn <span class="ot">=</span> <span class="fu">makeODE</span>( dP <span class="sc">~</span>  <span class="sc">-</span><span class="fl">0.04</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">20</span> )</span>
 <span id="cb216-2"><a href="d-slope-fields.html#cb216-2" aria-hidden="true" tabindex="-1"></a>soln1 <span class="ot">=</span> <span class="fu">integrateODE</span>(dyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">P=</span><span class="dv">2000</span>)</span>
 <span id="cb216-3"><a href="d-slope-fields.html#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln1,  <span class="at">nt=</span><span class="dv">10</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>It takes about 40 days to clean up the pollutant. That is, <span class="math inline">\(P(40)=0\)</span>.</li>
 </ol>
@@ -1067,7 +1067,7 @@ Slope Field D
 <div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="d-slope-fields.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb217-2"><a href="d-slope-fields.html#cb217-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.2</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">40</span>,</span>
 <span id="cb217-3"><a href="d-slope-fields.html#cb217-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">300</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-162-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-153-1.png" width="70%" /></p>
 <ul>
 <li>If <span class="math inline">\(P(0) &gt; 200\)</span> then the population increases without bound</li>
 <li>If <span class="math inline">\(P(0) = 200\)</span> then the population remains at this equilibrium value. This is an unstable equilibrium.</li>
@@ -1079,7 +1079,7 @@ Slope Field D
 <div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="d-slope-fields.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb218-2"><a href="d-slope-fields.html#cb218-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P),</span>
 <span id="cb218-3"><a href="d-slope-fields.html#cb218-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-163-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-154-1.png" width="70%" /></p>
 <ul>
 <li>If <span class="math inline">\(P(0) = 0\)</span> then the population remains at 0. This is an unstable equilibrium.</li>
 <li>If <span class="math inline">\(0 &lt; P(0) &lt; 500\)</span> then the population increases to the carrying capacity 500.</li>
@@ -1092,7 +1092,7 @@ Slope Field D
 <div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="d-slope-fields.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb219-2"><a href="d-slope-fields.html#cb219-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P) <span class="sc">-</span> <span class="dv">4</span>,</span>
 <span id="cb219-3"><a href="d-slope-fields.html#cb219-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-164-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-155-1.png" width="70%" /></p>
 <p>Let’s set <span class="math inline">\(\frac{dP}{dt}=0\)</span> and solve to find the equilibrium points. We have
 <span class="math display">\[\begin{align}
 -0.0001 P^2 + 0.05 P   - 4 &amp;= 0 \\
@@ -1124,7 +1124,7 @@ for <span class="math inline">\(0 \leq P \leq 300\)</span> and <span class="math
 <span id="cb220-5"><a href="d-slope-fields.html#cb220-5" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln1,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb220-6"><a href="d-slope-fields.html#cb220-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln2,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb220-7"><a href="d-slope-fields.html#cb220-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln3,  <span class="at">nt=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-165-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-156-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Constrained growth
 <span class="math display">\[
@@ -1143,7 +1143,7 @@ for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math
 <span id="cb221-9"><a href="d-slope-fields.html#cb221-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln3,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb221-10"><a href="d-slope-fields.html#cb221-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln4,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb221-11"><a href="d-slope-fields.html#cb221-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln5,  <span class="at">nt=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Constrained growth with constant harvesting
 <span class="math display">\[
@@ -1162,7 +1162,7 @@ for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math
 <span id="cb222-9"><a href="d-slope-fields.html#cb222-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln3,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb222-10"><a href="d-slope-fields.html#cb222-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln4,  <span class="at">nt=</span><span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb222-11"><a href="d-slope-fields.html#cb222-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traj_plot</span>(<span class="fu">P</span>(t) <span class="sc">~</span> t, soln5,  <span class="at">nt=</span><span class="dv">0</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-158-1.png" width="672" /></p>
 
 </div>
 </div>

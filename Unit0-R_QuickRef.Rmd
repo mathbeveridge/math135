@@ -116,7 +116,7 @@ gf_point(Y ~ X)
 
 ```
 
-The prefix `gf` in the name `gf_point`is short for "graph formula." You can specify labels for the horizontal axis and the vertical axis using `xlab` and `ylab`.
+The prefix `gf` in the name `gf_point` is short for "graph formula." You can specify labels for the horizontal axis and the vertical axis using `xlab` and `ylab`.
 
 ```{r}
 
@@ -149,8 +149,9 @@ slice_plot(sin(x) ~ x, bounds(x=0:2*pi), color='blue') +
 
 
 
-We can layer one plot on top of another by using a pipe `%>%` 
-* You only need to specify the `bounds` for the **first plot** because the second one is added to the first.
+We can layer one plot on top of another by using a pipe `%>%`.
+
+* You `only need to specify the `bounds` for the **first plot** because the second one is added to the first.
 * It's helpful to change the color for subsequent plots. Use the argument `color="red"` using any color name you like (RStudio knows a lot of colors!)
 
 
@@ -485,7 +486,8 @@ Now, if I want to estimate the Lagrange multiplier $\lambda$, I would change my 
 contour_plot(P(x,y)~x&y, domain(x=0:40, y=20:60), 
              contours_at=seq(20,50,2), skip=0) |>
   contour_plot(Q(x,y) ~ x & y, contour_color="black", 
-               contours_at=c(200,210), label_placement=.25)
+               contours_at=c(200,210), skip=0, 
+               label_placement=.25)
 ```
 
 We have
